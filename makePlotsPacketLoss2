@@ -1,0 +1,49 @@
+#!/usr/bin/gnuplot
+set term postscript eps enhanced color size 4,2.8
+
+set grid y lt 0
+
+
+set key bottom right
+#set format x "%.1f"
+set logscale y
+
+set xlabel "Connections"
+#pl="0.0"
+set xrange [0.0001:0.1]
+
+set out "figures/expo_th".pl.".eps"
+set title "Throughput, Packet Loss = ".pl
+set ylabel "Throughput packets/slot"
+set xlabel "Arrival rate (connections/timeslot)"
+set logscale x
+plot \
+     "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:8 ti 'LocalVoting' w lp, \
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:8 ti 'Simple' w lp, \
+     "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:8 ti 'LQF' w lp, \
+     "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:8 ti 'DRAND' w lp, \
+     "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:8 ti 'Lyui' lt 8 w lp
+ 
+set out "figures/expo_del".pl.".eps"
+set title "Delay, Packet Loss = ".pl
+set ylabel "Delay (timeslots)"
+plot \
+     "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:9 ti 'LocalVoting' w lp, \
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:9 ti 'Simple' w lp, \
+     "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:9 ti 'LQF' w lp, \
+     "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:9 ti 'DRAND' w lp, \
+     "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:9 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_deliv".pl.".eps"
+set title "Delivery time, Packet Loss = ".pl
+set ylabel "Time (timeslots)"
+plot \
+     "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:10 ti 'LocalVoting' w lp, \
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:10 ti 'Simple' w lp, \
+     "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:10 ti 'LQF' w lp, \
+     "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:10 ti 'DRAND' w lp, \
+     "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:10 ti 'Lyui' lt 8 w lp
+

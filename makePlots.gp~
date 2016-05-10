@@ -1,0 +1,48 @@
+#!/usr/bin/gnuplot
+set term postscript enhanced color
+#set terminal epslatex color
+
+set size 1,1
+set key spacing 1.5
+set boxwidth 0.85
+set grid y lt 0
+
+set key left
+#set format x "%.1f"
+set logscale y
+
+set xlabel "size (nodes)"
+set out "figures/total_thoughput.eps"
+set title "Total Throughput"
+set ylabel "Throughput (bps)"
+plot "<awk '$1==10{print $0}' total" using 2:3 ti 'step=10' w lp, \
+     "<awk '$1==50{print $0}' total" using 2:3 ti 'step=50' w lp, \
+     "<awk '$1==90{print $0}' total" using 2:3 ti 'step=90' w lp
+
+set out "figures/avg_thoughput.eps"
+set title "Average Throughput"
+set ylabel "Throughput (bps)"
+plot "<awk '$1==10{print $0}' total" using 2:4 ti 'step=10' w lp, \
+     "<awk '$1==50{print $0}' total" using 2:4 ti 'step=50' w lp, \
+     "<awk '$1==90{print $0}' total" using 2:4 ti 'step=90' w lp
+
+set out "figures/fairness.eps"
+set title "Jain's fairness index"
+set ylabel "fairness index"
+plot "<awk '$1==10{print $0}' total" using 2:5 ti 'step=10' w lp, \
+     "<awk '$1==50{print $0}' total" using 2:5 ti 'step=50' w lp, \
+     "<awk '$1==90{print $0}' total" using 2:5 ti 'step=90' w lp
+
+set out "figures/max_thoughput.eps"
+set title "Maximum Throughput"
+set ylabel "Throughput (bps)"
+plot "<awk '$1==10{print $0}' total" using 2:6 ti 'step=10' w lp, \
+     "<awk '$1==50{print $0}' total" using 2:6 ti 'step=50' w lp, \
+     "<awk '$1==90{print $0}' total" using 2:6 ti 'step=90' w lp
+
+set out "figures/min_thoughput.eps"
+set title "Minimum Throughput"
+set ylabel "Throughput (bps)"
+plot "<awk '$1==10{print $0}' total" using 2:7 ti 'step=10' w lp, \
+     "<awk '$1==50{print $0}' total" using 2:7 ti 'step=50' w lp, \
+     "<awk '$1==90{print $0}' total" using 2:7 ti 'step=90' w lp

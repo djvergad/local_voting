@@ -1,0 +1,55 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color
+set term postscript eps enhanced color size 4,2.8
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+set grid y lt 0
+
+#arrival="0.0056234133"
+
+print "arrival=".arrival
+
+set key bottom right
+#set format x "%.1f"
+set logscale y
+
+set xlabel "Packet Loss"
+
+set out "figures/del_".arrival.".eps"
+set title "Average Delay, for Arrival rate = ".arrival
+set ylabel "Delay (timeslots)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'Simple' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'Lyui' lt 8 w lp
+
+set out "figures/deliv_".arrival.".eps"
+set title "Delivery Time, for Arrival rate = ".arrival
+set ylabel "Delay (timeslots)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'Simple' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'Lyui' lt 8 w lp
+
+set out "figures/thr_".arrival.".eps"
+set title "Throughput, for Arrival rate = ".arrival 
+set ylabel "Throughpu (Packets/timeslot)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'Simple' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'Lyui' lt 8 w lp

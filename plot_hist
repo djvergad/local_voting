@@ -1,0 +1,41 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color 
+set term postscript eps enhanced color size 4,2.8
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+
+
+
+
+set out "figures/simple_hist.eps"
+set title "steady state - histgram - individual"
+set boxwidth 0.05 absolute
+set style fill solid 1.0 noborder
+set xlabel "Queue length"
+set ylabel "Points"
+set yrange [0:10000]
+set xrange [0:150]
+#set logscale y
+
+bin_width = 5;
+bin_number(x) = floor(x/bin_width)
+
+rounded(x) = bin_width * (bin_number(x) + 0.5)
+
+plot 'hist_simple_scen2' using (rounded($1)):(1) smooth frequency t "simple", \
+     'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
+#     'hist_balanced_scen2' using (rounded($1)):(1) smooth frequency t "balanced", \
+
+set out "figures/avg.eps"
+set title "steady state - histgram - average over time"
+bin_width = 0.01;
+set ylabel "Nodes"
+set yrange [*:*]
+set xrange [0:0.7]
+plot 'single_dump_simple_avg' using (rounded($1)):(1) smooth frequency t "simple", \
+     'single_dump_balanced_avg' using (rounded($1)):(1) smooth frequency t "balanced", \
+     'single_dump_localVoting_avg' using (rounded($1)):(1) smooth frequency t "Local Voting"
+
