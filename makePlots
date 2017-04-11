@@ -1,0 +1,198 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color 
+#set term postscript eps enhanced monochrome size 4,2.8
+set term postscript eps enhanced color size 4,2.8 linewidth 2
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+set grid y lt 0
+
+
+set key bottom right
+#set format x "%.1f"
+set logscale y
+
+set xlabel "Connections"
+
+set out "figures/avg_delay.eps"
+set title "Average End-to-End Delivery Time"
+set ylabel "Time (timeslots)"
+set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\"' total" using 5:7 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"' total" using 5:7 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"' total" using 5:7 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"' total" using 5:7 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"' total" using 5:7 ti 'Lyui' lt 8 w lp
+
+set key bottom left
+
+
+set out "figures/fairness.eps"
+set title "Fairness"
+set ylabel "Jain's fairness index"
+set yrange [0.7:1]
+unset logscale y
+plot \
+     "<awk '$6==\"LocalVoting\"' total" using 5:8 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"' total" using 5:8 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"' total" using 5:8 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"' total" using 5:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"' total" using 5:8 ti 'Lyui' lt 8 w lp
+
+set key bottom right
+set out "figures/max_delay.eps"
+set logscale y
+set title "Maximum End-to-End Delivery Time"
+set ylabel "Time (timeslots)"
+set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\"' total" using 5:9 ti 'LocalVoting' w lp , \
+     "<awk '$6==\"LQF\"' total" using 5:9 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"' total" using 5:9 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"' total" using 5:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"' total" using 5:9 ti 'Lyui' lt 8 w lp
+
+set key bottom right
+
+set out "figures/min_delay.eps"
+set title "Minimum End-to-End Delivery Time"
+set ylabel "Time (timeslots)"
+set yrange [*:*]
+plot \
+     "<awk '$6==\"LocalVoting\"' total" using 5:10 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"' total" using 5:10 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"' total" using 5:10 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"' total" using 5:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"' total" using 5:10 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_th.eps"
+set xrange [0.0001:0.1]
+set yrange [0.01:1]
+set title "Throughput"
+set ylabel "Throughput packets/slot"
+set xlabel "Arrival rate (connections/timeslot)"
+set logscale x
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:8 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:8 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:8 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:8 ti 'Lyui' lt 8 w lp
+ 
+set out "figures/expo_del.eps"
+set title "Delay"
+set yrange [5:200000]
+set ylabel "Delay (timeslots)"
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:9 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:9 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:9 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:9 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_deliv.eps"
+set title "Delivery time"
+set yrange [1000:200000]
+set ylabel "Time (timeslots)"
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:10 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:10 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:10 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:10 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_thf.eps"
+unset logscale y
+set yrange [*:*]
+set key top right
+set title "Fairness in terms of Throughput"
+set ylabel "Jain's fairness index"
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:11 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:11 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:11 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:11 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:11 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_delf.eps"
+set title "Fairness in terms of delay"
+set ylabel "Jain's fairness index"
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:12 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:12 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:12 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:12 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:12 ti 'Lyui' lt 8 w lp
+
+set out "figures/expo_delivf.eps"
+set title "Fairness in terms of delivery time"
+set ylabel "Jain's fairness index"
+plot \
+     "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:13 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:13 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:13 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:13 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:13 ti 'Lyui' lt 8 w lp
+
+
+set out "figures/gamma_th.eps"
+set xrange [0.0001:0.1]
+set yrange [*:*]
+set title "Throughput"
+set ylabel "Throughput packets/slot"
+set xlabel "Arrival rate (connections/timeslot)"
+set logscale x
+set logscale y
+set key bottom right
+plot \
+     "<awk '$6==0.001&&$7==0' total_gamma" using 5:8 ti 'gamma=0.001' w lp, \
+     "<awk '$6==0.01&&$7==0' total_gamma" using 5:8 ti 'gamma=0.01' w lp, \
+     "<awk '$6==0.1&&$7==0' total_gamma" using 5:8 ti 'gamma=0.1' w lp, \
+     "<awk '$6==1.0&&$7==0' total_gamma" using 5:8 ti 'gamma=1' w lp, \
+     "<awk '$6==10.0&&$7==0' total_gamma" using 5:8 ti 'gamma=10' lt 7 w lp, \
+     "<awk '$6==100.0&&$7==0' total_gamma" using 5:8 ti 'gamma=100' lt 8 w lp, \
+     "<awk '$6==1000.0&&$7==0' total_gamma" using 5:8 ti 'gamma=1000' lt 9 w lp
+
+set out "figures/gamma_del.eps"
+set title "Delay"
+set yrange [5:200000]
+set ylabel "Delay (timeslots)"
+plot \
+     "<awk '$6==0.001&&$7==0' total_gamma" using 5:9 ti 'gamma=0.001' w lp, \
+     "<awk '$6==0.01&&$7==0' total_gamma" using 5:9 ti 'gamma=0.01' w lp, \
+     "<awk '$6==0.1&&$7==0' total_gamma" using 5:9 ti 'gamma=0.1' w lp, \
+     "<awk '$6==1.0&&$7==0' total_gamma" using 5:9 ti 'gamma=1' w lp, \
+     "<awk '$6==10.0&&$7==0' total_gamma" using 5:9 ti 'gamma=10' lt 7 w lp, \
+     "<awk '$6==100.0&&$7==0' total_gamma" using 5:9 ti 'gamma=100' lt 8 w lp, \
+     "<awk '$6==1000.0&&$7==0' total_gamma" using 5:9 ti 'gamma=1000' lt 9 w lp
+
+set out "figures/gamma_deliv.eps"
+set title "Delivery time"
+set yrange [1000:200000]
+set ylabel "Time (timeslots)"
+plot \
+     "<awk '$6==0.001&&$7==0' total_gamma" using 5:10 ti 'gamma=0.001' w lp, \
+     "<awk '$6==0.01&&$7==0' total_gamma" using 5:10 ti 'gamma=0.01' w lp, \
+     "<awk '$6==0.1&&$7==0' total_gamma" using 5:10 ti 'gamma=0.1' w lp, \
+     "<awk '$6==1.0&&$7==0' total_gamma" using 5:10 ti 'gamma=1' w lp, \
+     "<awk '$6==10.0&&$7==0' total_gamma" using 5:10 ti 'gamma=10' lt 7 w lp, \
+     "<awk '$6==100.0&&$7==0' total_gamma" using 5:10 ti 'gamma=100' lt 8 w lp, \
+     "<awk '$6==1000.0&&$7==0' total_gamma" using 5:10 ti 'gamma=1000' lt 9 w lp
+
+set out "figures/gamma_thf.eps"
+unset logscale y
+set yrange [*:*]
+set key top right
+set title "Fairness in terms of Throughput"
+set ylabel "Jain's fairness index"
+plot \
+     "<awk '$6==0.001&&$7==0' total_gamma" using 5:11 ti 'gamma=0.001' w lp, \
+     "<awk '$6==0.01&&$7==0' total_gamma" using 5:11 ti 'gamma=0.01' w lp, \
+     "<awk '$6==0.1&&$7==0' total_gamma" using 5:11 ti 'gamma=0.1' w lp, \
+     "<awk '$6==1.0&&$7==0' total_gamma" using 5:11 ti 'gamma=1' w lp,  \
+     "<awk '$6==10.0&&$7==0' total_gamma" using 5:11 ti 'gamma=10' lt 7 w lp, \
+     "<awk '$6==100.0&&$7==0' total_gamma" using 5:11 ti 'gamma=100' lt 8 w lp, \
+     "<awk '$6==1000.0&&$7==0' total_gamma" using 5:11 ti 'gamma=1000' lt 9 w lp

@@ -1,0 +1,63 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color
+set term postscript eps enhanced color size 4,2.8 linewidth 2
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+set grid y lt 0
+
+#arrival="0.0056234133"
+
+print "connections=".connections
+
+set key bottom right
+#set format x "%.1f"
+set logscale y
+
+set xlabel "Topology size"
+
+set out "figures/dens_avg_".connections.".eps"
+set title "Average Delay, for ".connections." connections"
+set ylabel "Delay (timeslots)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:7 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:7 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".connections."\"' total_density" using 3:7 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".connections."\"' total_density" using 3:7 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".connections."\"' total_density" using 3:7 ti 'Lyui' lt 8 w lp
+
+set out "figures/dens_fair_".connections.".eps"
+set title "Fairness, for ".connections." connections"
+set ylabel "Jain's fairness index"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:8 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:8 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".connections."\"' total_density" using 3:8 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".connections."\"' total_density" using 3:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".connections."\"' total_density" using 3:8 ti 'Lyui' lt 8 w lp
+
+set out "figures/dens_max_".connections.".eps"
+set title "Maximum delay, for ".connections." connections" 
+set ylabel "Delay (timeslots)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:9 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:9 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".connections."\"' total_density" using 3:9 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".connections."\"' total_density" using 3:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".connections."\"' total_density" using 3:9 ti 'Lyui' lt 8 w lp
+
+set out "figures/dens_min_".connections.".eps"
+set title "Minimum delay, for ".connections." connections" 
+set ylabel "Delay (timeslots)"
+#set yrange [500:50000]
+plot \
+     "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:10 ti 'LocalVoting' w lp, \
+     "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:10 ti 'LQF' w lp, \
+     "<awk '$6==\"DRAND\" && $5==\"".connections."\"' total_density" using 3:10 ti 'DRAND' w lp, \
+     "<awk '$6==\"Lobats\" && $5==\"".connections."\"' total_density" using 3:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$6==\"Lyui\" && $5==\"".connections."\"' total_density" using 3:10 ti 'Lyui' lt 8 w lp

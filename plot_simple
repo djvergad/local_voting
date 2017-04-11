@@ -1,0 +1,48 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color 
+set term postscript eps enhanced color size 4,2.8 linewidth 2
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+
+set xlabel "Time"
+set ylabel "Queue Length"
+
+unset key 
+
+#set logscale y
+set yrange [0.1:1000]
+
+set out "figures/simple.eps"
+set title "simple - steady state"
+
+plot for [col=2:100] "single_dump_simple" u 1:col w l 
+
+set out "figures/balanced.eps"
+set title "balanced - steady state"
+
+plot for [col=2:100] "single_dump_localVoting" u 1:col w l 
+
+set out "figures/localVoting.eps"
+set title "Local Voting - steady state"
+
+plot for [col=2:100] "single_dump_balanced" u 1:col w l
+
+set out "figures/simple_scen1.eps"
+set yrange [0:250]
+set xrange [0:3500]
+#set yrange [0:*]
+#set xrange [0:*]
+set title "simple - scenario 1"
+
+plot for [col=2:100] "single_dump_simple_scen1" u 1:col w l 
+
+set out "figures/balanced_scen1.eps"
+set title "balanced - scenario 1"
+plot for [col=2:100] "single_dump_balanced_scen1" u 1:col w l
+
+set out "figures/localVoting_scen1.eps"
+set title "Local Voting - scenario 1"
+plot for [col=2:100] "single_dump_localVoting_scen1" u 1:col w l

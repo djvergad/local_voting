@@ -1,0 +1,279 @@
+rm: cannot remove `output_expo': No such file or directory
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+rm: cannot remove `output_lv': No such file or directory
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+./runLV.sh: line 2: 14279 Terminated              ./runParallelOnlyLV.sh
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 15 jobs to finish. Send SIGTERM again to stop now.
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 56
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 93
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 91
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 89
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 71
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 58
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 76
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 28
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 46
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 48
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 79
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 73
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 88
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 204
+parallel: ./runGamma.sh 100 10 100 10 0.1 10.0 0.0 90
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
+parallel: worker 15
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
+parallel: worker 15
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 103 jobs to finish. Send SIGTERM again to stop now.
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 227
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 212
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 171
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 222
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 217
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 140
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 249
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 235
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 231
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 240
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 162
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 243
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 181
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 189
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 170
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 145
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 248
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 208
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 157
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 209
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 230
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 223
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 207
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 167
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 224
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 252
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 206
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 247
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 166
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 242
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 156
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 225
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 112
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 161
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 164
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 159
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 201
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 178
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 244
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 234
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 229
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 176
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 228
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 233
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 241
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 216
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 203
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 239
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 226
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 180
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 174
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 190
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 202
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 179
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 219
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 218
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 134
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 196
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 188
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 199
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 193
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 232
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 198
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 251
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 175
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 131
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 172
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 210
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 183
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 177
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 192
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 169
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 197
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 184
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 200
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 195
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 182
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 165
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 168
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 237
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 187
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 173
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 250
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 186
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 194
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 238
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 158
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 211
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 220
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 221
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 155
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 191
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 185
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 215
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 245
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 236
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 214
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 213
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 246
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 147
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 204
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 149
+parallel: ./runOnce.sh 100 10 100 10 19 LocalVoting 205
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 103 jobs to finish. Send SIGTERM again to stop now.
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 274
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 262
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 283
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 275
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 261
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 251
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 327
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 335
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 248
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 321
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 270
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 246
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 254
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 266
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 281
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 322
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 276
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 331
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 318
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 295
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 280
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 324
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 289
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 332
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 301
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 300
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 294
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 309
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 323
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 277
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 339
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 317
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 333
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 253
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 296
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 297
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 247
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 258
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 231
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 316
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 292
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 337
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 311
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 303
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 285
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 319
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 308
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 224
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 287
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 279
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 293
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 263
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 310
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 328
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 282
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 338
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 291
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 221
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 298
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 245
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 334
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 302
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 241
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 304
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 290
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 272
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 264
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 307
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 250
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 284
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 226
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 288
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 252
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 232
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 306
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 260
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 330
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 268
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 329
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 314
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 265
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 271
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 259
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 286
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 238
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 242
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 228
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 315
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 255
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 325
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 326
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 320
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 313
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 273
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 299
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 225
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 336
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 312
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 278
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 269
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 305
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 267
+parallel: ./runOnce.sh 100 10 100 10 28 LocalVoting 256
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
+parallel: worker 15
+rm: cannot remove `output_expoi_lv': No such file or directory
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
+parallel: worker 15
+rm: cannot remove `output_density_lv': No such file or directory
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-13 port 22: No route to host
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
+parallel: worker 15

@@ -1,0 +1,33 @@
+#!/usr/bin/gnuplot
+#set term postscript enhanced color 
+set term postscript eps enhanced color size 4,2.8
+#set terminal epslatex color
+
+#set size 1,1
+#set key spacing 1.5
+#set boxwidth 0.85
+
+set xlabel "Time"
+set ylabel "Slots"
+
+unset key 
+
+#set logscale y
+#set yrange [0.1:1000]
+
+set out "figures/slots.eps"
+set title "slot allocations - steady state"
+
+plot for [col=2:101] "<awk '$1==158000,$1==158100' slot_allocations" u 1:col w lp 
+
+set ylabel "X"
+set out "figures/x_over_time.eps"
+set title "X - steady state"
+
+plot for [col=2:101] "<awk '$1==158000,$1==160000' x_over_time" u 1:col w lp 
+
+set out "figures/x_over_time_scen_1.eps"
+set title "X - scenario 1"
+
+#set xrange [0:20000]
+plot for [col=2:101] "<awk '$1==0,$1==6000' x_over_time_scen_1" u 1:col w l 
