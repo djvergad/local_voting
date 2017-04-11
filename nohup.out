@@ -277,3 +277,79 @@ ssh: connect to host compute-0-13 port 22: No route to host
 parallel: SIGTERM received. No new jobs will be started.
 parallel: Waiting for these 1 jobs to finish. Send SIGTERM again to stop now.
 parallel: worker 15
+<<<<<<< HEAD
+=======
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 104 jobs to finish. Send SIGTERM again to stop now.
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 197
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 174
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 117
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 194
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 192
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 203
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 126
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 202
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 173
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 135
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 124
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 159
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 118
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 108
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 144
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 152
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 201
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 154
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 193
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 178
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 179
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 160
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 200
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 172
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 151
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 186
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 149
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 212
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 175
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 208
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 112
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 211
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 176
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 168
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 130
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 114
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 164
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 207
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 166
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 113
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 155
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 136
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 170
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 107
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 153
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 206
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 146
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 171
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 147
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 169
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 134
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 122
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 119
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 188
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 110
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 111
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 204
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 191
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 183
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 142
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 157
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 123
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 185
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 182
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 210
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 163
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 141
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 209
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 120
+parallel: ./runOnce.sh 100 10 500 10 30 LocalVoting 158
+parallel: ./runOnce.sh 100 10 500 10 30./runParallelDensityOnlyLV.sh: line 7:  6010 Killed                  parallel --gnu --sshloginfile <(~/scripts/build_sshlogin.sh) --workdir $PWD ./runOnce.sh {1} {2} {3} {4} {5} {6} {7} ::: 100 ::: 10 ::: 10 20 50 100 200 500 1000 ::: 10 ::: {30..1} ::: LocalVoting ::: {1..500} >> output_density_lv
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b

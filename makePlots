@@ -1,7 +1,11 @@
 #!/usr/bin/gnuplot
 #set term postscript enhanced color 
 #set term postscript eps enhanced monochrome size 4,2.8
+<<<<<<< HEAD
 set term postscript eps enhanced color size 4,2.8 linewidth 2
+=======
+set term postscript eps enhanced color size 4,2.8
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 #set terminal epslatex color
 
 #set size 1,1
@@ -21,11 +25,20 @@ set title "Average End-to-End Delivery Time"
 set ylabel "Time (timeslots)"
 set yrange [500:50000]
 plot \
+<<<<<<< HEAD
      "<awk '$6==\"LocalVoting\"' total" using 5:7 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"' total" using 5:7 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"' total" using 5:7 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"' total" using 5:7 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\"' total" using 5:7 ti 'Lyui' lt 8 w lp
+=======
+     "<awk '$3==\"LocalVoting\"{print $0}' total" using 2:7 ti 'LocalVoting' w lp, \
+     "<awk '$3==\"Simple\"{print $0}' total" using 2:7 ti 'Simple' w lp, \
+     "<awk '$3==\"LQF\"{print $0}' total" using 2:7 ti 'LQF' w lp, \
+     "<awk '$3==\"DRAND\"{print $0}' total" using 2:7 ti 'DRAND' w lp, \
+     "<awk '$3==\"Lobats\"{print $0}' total" using 2:7 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$3==\"Lyui\"{print $0}' total" using 2:7 ti 'Lyui' lt 8 w lp
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set key bottom left
 
@@ -36,11 +49,20 @@ set ylabel "Jain's fairness index"
 set yrange [0.7:1]
 unset logscale y
 plot \
+<<<<<<< HEAD
      "<awk '$6==\"LocalVoting\"' total" using 5:8 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"' total" using 5:8 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"' total" using 5:8 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"' total" using 5:8 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\"' total" using 5:8 ti 'Lyui' lt 8 w lp
+=======
+     "<awk '$3==\"LocalVoting\"{print $0}' total" using 2:8 ti 'LocalVoting' w lp, \
+     "<awk '$3==\"Simple\"{print $0}' total" using 2:8 ti 'Simple' w lp, \
+     "<awk '$3==\"LQF\"{print $0}' total" using 2:8 ti 'LQF' w lp, \
+     "<awk '$3==\"DRAND\"{print $0}' total" using 2:8 ti 'DRAND' w lp, \
+     "<awk '$3==\"Lobats\"{print $0}' total" using 2:8 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$3==\"Lyui\"{print $0}' total" using 2:8 ti 'Lyui' lt 8 w lp
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set key bottom right
 set out "figures/max_delay.eps"
@@ -49,11 +71,20 @@ set title "Maximum End-to-End Delivery Time"
 set ylabel "Time (timeslots)"
 set yrange [500:50000]
 plot \
+<<<<<<< HEAD
      "<awk '$6==\"LocalVoting\"' total" using 5:9 ti 'LocalVoting' w lp , \
      "<awk '$6==\"LQF\"' total" using 5:9 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"' total" using 5:9 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"' total" using 5:9 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\"' total" using 5:9 ti 'Lyui' lt 8 w lp
+=======
+     "<awk '$3==\"LocalVoting\"{print $0}' total" using 2:9 ti 'LocalVoting' w lp , \
+     "<awk '$3==\"Simple\"{print $0}' total" using 2:9 ti 'Simple' w lp, \
+     "<awk '$3==\"LQF\"{print $0}' total" using 2:9 ti 'LQF' w lp, \
+     "<awk '$3==\"DRAND\"{print $0}' total" using 2:9 ti 'DRAND' w lp, \
+     "<awk '$3==\"Lobats\"{print $0}' total" using 2:9 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$3==\"Lyui\"{print $0}' total" using 2:9 ti 'Lyui' lt 8 w lp
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set key bottom right
 
@@ -62,11 +93,20 @@ set title "Minimum End-to-End Delivery Time"
 set ylabel "Time (timeslots)"
 set yrange [*:*]
 plot \
+<<<<<<< HEAD
      "<awk '$6==\"LocalVoting\"' total" using 5:10 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"' total" using 5:10 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"' total" using 5:10 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"' total" using 5:10 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\"' total" using 5:10 ti 'Lyui' lt 8 w lp
+=======
+     "<awk '$3==\"LocalVoting\"{print $0}' total" using 2:10 ti 'LocalVoting' w lp, \
+     "<awk '$3==\"Simple\"{print $0}' total" using 2:10 ti 'Simple' w lp, \
+     "<awk '$3==\"LQF\"{print $0}' total" using 2:10 ti 'LQF' w lp, \
+     "<awk '$3==\"DRAND\"{print $0}' total" using 2:10 ti 'DRAND' w lp, \
+     "<awk '$3==\"Lobats\"{print $0}' total" using 2:10 ti 'LoBaTS' lt 7 w lp, \
+     "<awk '$3==\"Lyui\"{print $0}' total" using 2:10 ti 'Lyui' lt 8 w lp
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set out "figures/expo_th.eps"
 set xrange [0.0001:0.1]
@@ -77,6 +117,10 @@ set xlabel "Arrival rate (connections/timeslot)"
 set logscale x
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:8 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:8 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:8 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:8 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:8 ti 'LoBaTS' lt 7 w lp, \
@@ -88,6 +132,10 @@ set yrange [5:200000]
 set ylabel "Delay (timeslots)"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:9 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:9 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:9 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:9 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:9 ti 'LoBaTS' lt 7 w lp, \
@@ -99,6 +147,10 @@ set yrange [1000:200000]
 set ylabel "Time (timeslots)"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:10 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:10 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:10 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:10 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:10 ti 'LoBaTS' lt 7 w lp, \
@@ -112,6 +164,10 @@ set title "Fairness in terms of Throughput"
 set ylabel "Jain's fairness index"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:11 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:11 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:11 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:11 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:11 ti 'LoBaTS' lt 7 w lp, \
@@ -122,6 +178,10 @@ set title "Fairness in terms of delay"
 set ylabel "Jain's fairness index"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:12 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:12 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:12 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:12 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:12 ti 'LoBaTS' lt 7 w lp, \
@@ -132,6 +192,10 @@ set title "Fairness in terms of delivery time"
 set ylabel "Jain's fairness index"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:13 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\"&&$7==0' total_expo" using 5:13 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:13 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:13 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:13 ti 'LoBaTS' lt 7 w lp, \

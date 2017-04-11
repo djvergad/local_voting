@@ -1,5 +1,9 @@
 #!/usr/bin/gnuplot
+<<<<<<< HEAD
 set term postscript eps enhanced color size 4,2.8 linewidth 2
+=======
+set term postscript eps enhanced color size 4,2.8
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set grid y lt 0
 
@@ -19,31 +23,52 @@ set xlabel "Arrival rate (connections/timeslot)"
 set logscale x
 plot \
      "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:8 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:8 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:8 ti 'LQF' w lp, \
      "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:8 ti 'DRAND' w lp, \
      "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:8 ti 'LoBaTS' lt 7 w lp, \
      "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:8 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 #     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:8 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
  
 set out "figures/expo_del".pl.".eps"
 set title "Delay, Packet Loss = ".pl
 set ylabel "Delay (timeslots)"
 plot \
      "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:9 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:9 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:9 ti 'LQF' w lp, \
      "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:9 ti 'DRAND' w lp, \
      "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:9 ti 'LoBaTS' lt 7 w lp, \
      "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:9 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 #     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:9 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set out "figures/expo_deliv".pl.".eps"
 set title "Delivery time, Packet Loss = ".pl
 set ylabel "Time (timeslots)"
 plot \
      "<awk -v pl=".pl." '$6==\"LocalVoting\"&&$7==pl' total_expo" using 5:10 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:10 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk -v pl=".pl." '$6==\"LQF\"&&$7==pl' total_expo" using 5:10 ti 'LQF' w lp, \
      "<awk -v pl=".pl." '$6==\"DRAND\"&&$7==pl' total_expo" using 5:10 ti 'DRAND' w lp, \
      "<awk -v pl=".pl." '$6==\"Lobats\"&&$7==pl' total_expo" using 5:10 ti 'LoBaTS' lt 7 w lp, \
      "<awk -v pl=".pl." '$6==\"Lyui\"&&$7==pl' total_expo" using 5:10 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 #     "<awk -v pl=".pl." '$6==\"Simple\"&&$7==pl' total_expo" using 5:10 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 

@@ -1,6 +1,10 @@
 #!/usr/bin/gnuplot
 #set term postscript enhanced color
+<<<<<<< HEAD
 set term postscript eps enhanced color size 4,2.8 linewidth 2
+=======
+set term postscript eps enhanced color size 4,2.8
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 #set terminal epslatex color
 
 #set size 1,1
@@ -24,11 +28,18 @@ set ylabel "Delay (timeslots)"
 #set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 # "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:9 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set out "figures/deliv_".arrival.".eps"
 set title "Delivery Time, for Arrival rate = ".arrival
@@ -36,11 +47,18 @@ set ylabel "Delay (timeslots)"
 #set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 #     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 
 set out "figures/thr_".arrival.".eps"
 set title "Throughput, for Arrival rate = ".arrival 
@@ -48,8 +66,15 @@ set ylabel "Throughpu (Packets/timeslot)"
 #set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LocalVoting' w lp, \
+<<<<<<< HEAD
+=======
+     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'Simple' w lp, \
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
      "<awk '$6==\"LQF\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LoBaTS' lt 7 w lp, \
      "<awk '$6==\"Lyui\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'Lyui' lt 8 w lp
+<<<<<<< HEAD
 #     "<awk '$6==\"Simple\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'Simple' w lp, \
+=======
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b

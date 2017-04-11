@@ -1,6 +1,10 @@
 #!/usr/bin/gnuplot
 #set term postscript enhanced color 
+<<<<<<< HEAD
 set term postscript eps enhanced color size 4,2.8 linewidth 2
+=======
+set term postscript eps enhanced color size 4,2.8
+>>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 #set terminal epslatex color
 
 #set size 1,1
