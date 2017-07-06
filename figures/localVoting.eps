@@ -1,11 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: figures/localVoting.eps
-%%Creator: gnuplot 4.4 patchlevel 3
-<<<<<<< HEAD
-%%CreationDate: Fri Oct 11 16:16:26 2013
-=======
-%%CreationDate: Tue Sep 17 13:41:39 2013
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
+%%Creator: gnuplot 4.6 patchlevel 6
+%%CreationDate: Thu Jul  6 17:11:52 2017
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 338 251
 %%EndComments
@@ -24,14 +20,12 @@ gnudict begin
 /Level1 false def
 /Rounded false def
 /ClipToBoundingBox false def
+/SuppressPDFMark false def
 /TransparentPatterns false def
-<<<<<<< HEAD
 /gnulinewidth 10.000 def
-=======
-/gnulinewidth 5.000 def
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
 %
 /vshift -46 def
 /dl1 {
@@ -46,29 +40,6 @@ gnudict begin
 /vpt_ 31.5 def
 /hpt hpt_ def
 /vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (figures/localVoting.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 3)
-<<<<<<< HEAD
-  /Author (netsim)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Fri Oct 11 16:16:26 2013)
-=======
-  /Author (dimitriv)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Tue Sep 17 13:41:39 2013)
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
-  /DOCINFO pdfmark
-end
-} ifelse
 /doclip {
   ClipToBoundingBox {
     newpath 50 50 moveto 338 50 lineto 338 251 lineto 50 251 lineto closepath
@@ -76,7 +47,7 @@ end
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -343,7 +314,8 @@ end
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -476,8 +448,26 @@ currentdict end definefont pop
   Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
 /XYsave    { [( ) 1 2 true false 3 ()] } bind def
 /XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (figures/localVoting.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.6 patchlevel 6)
+  /Author (dimitriv)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Jul  6 17:11:52 2017)
+  /DOCINFO pdfmark
+end
+} ifelse
 end
 %%EndProlog
+%%Page: 1 1
 gnudict begin
 gsave
 doclip
@@ -486,8 +476,10 @@ doclip
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 5760.00 4030.00 BoxColFill} if
 1.000 UL
 LTb
+LCb setrgbcolor
 770 448 M
 63 0 V
 4674 0 R
@@ -498,6 +490,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 764 M
 63 0 V
 4674 0 R
@@ -508,6 +501,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 1080 M
 63 0 V
 4674 0 R
@@ -518,6 +512,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 1396 M
 63 0 V
 4674 0 R
@@ -528,6 +523,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 1712 M
 63 0 V
 4674 0 R
@@ -538,6 +534,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 2028 M
 63 0 V
 4674 0 R
@@ -548,6 +545,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 2344 M
 63 0 V
 4674 0 R
@@ -558,6 +556,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 2661 M
 63 0 V
 4674 0 R
@@ -568,6 +567,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 2977 M
 63 0 V
 4674 0 R
@@ -578,6 +578,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 3293 M
 63 0 V
 4674 0 R
@@ -588,6 +589,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 3609 M
 63 0 V
 4674 0 R
@@ -598,6 +600,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 770 448 M
 0 63 V
 0 3098 R
@@ -608,16 +611,18 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
-1559 448 M
+LCb setrgbcolor
+1560 448 M
 0 63 V
 0 3098 R
 0 -63 V
 stroke
-1559 308 M
+1560 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 50000)]
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2349 448 M
 0 63 V
 0 3098 R
@@ -628,6 +633,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3138 448 M
 0 63 V
 0 3098 R
@@ -638,6 +644,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3928 448 M
 0 63 V
 0 3098 R
@@ -648,16 +655,18 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
-4717 448 M
+LCb setrgbcolor
+4718 448 M
 0 63 V
 0 3098 R
 0 -63 V
 stroke
-4717 308 M
+4718 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 250000)]
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5507 448 M
 0 63 V
 0 3098 R
@@ -668,8 +677,10 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 770 3609 N
 770 448 L
 4737 0 V
@@ -694,10 +705,13 @@ LTb
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
 1.000 UL
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 771 448 M
 0 3 V
 0 3 V
@@ -3643,6 +3657,7 @@ stroke 5393 460 M
 % Begin plot #2
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 906 448 M
 0 3 V
@@ -3791,6 +3806,7 @@ stroke 1946 457 M
 % Begin plot #3
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1371 448 M
 1 3 V
@@ -3821,6 +3837,7 @@ LT2
 % Begin plot #4
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1178 448 M
 0 3 V
@@ -4417,6 +4434,7 @@ stroke 4448 612 M
 % Begin plot #5
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2143 448 M
 0 6 V
@@ -4688,6 +4706,7 @@ stroke 4484 457 M
 % Begin plot #6
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1725 448 M
 0 6 V
@@ -4891,8 +4910,8 @@ stroke 4310 448 M
 0 3 V
 0 -3 V
 0 -3 V
-0 3 V
 1 3 V
+0 3 V
 0 -3 V
 0 -3 V
 0 3 V
@@ -4969,6 +4988,7 @@ stroke 4719 454 M
 % Begin plot #7
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1183 448 M
 1 6 V
@@ -5000,6 +5020,7 @@ LT6
 % Begin plot #8
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2489 448 M
 0 3 V
@@ -5122,6 +5143,7 @@ stroke 5370 448 M
 % Begin plot #9
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 829 448 M
 0 3 V
@@ -5358,6 +5380,7 @@ stroke 4496 448 M
 % Begin plot #10
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1178 448 M
 0 6 V
@@ -5846,6 +5869,7 @@ stroke 4328 473 M
 % Begin plot #11
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1033 448 M
 0 3 V
@@ -6899,11 +6923,13 @@ stroke 5062 641 M
 % Begin plot #12
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 % End plot #12
 % Begin plot #13
 1.000 UL
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1073 448 M
 0 3 V
@@ -7135,6 +7161,7 @@ stroke 4771 482 M
 % Begin plot #14
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2490 448 M
 0 3 V
@@ -7332,6 +7359,7 @@ stroke 4436 659 M
 % Begin plot #15
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1341 448 M
 0 6 V
@@ -8108,6 +8136,7 @@ stroke 2938 448 M
 % Begin plot #16
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1776 448 M
 0 3 V
@@ -8754,6 +8783,7 @@ stroke 5371 451 M
 % Begin plot #17
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 917 448 M
 0 3 V
@@ -8927,8 +8957,7 @@ stroke 1541 454 M
 0 3 V
 1 0 V
 0 -3 V
-0 3 V
-1 0 V
+1 3 V
 0 -3 V
 0 -3 V
 1 3 V
@@ -8965,8 +8994,8 @@ stroke 1541 454 M
 0 4 V
 1 3 V
 0 3 V
-stroke 1570 492 M
 0 3 V
+stroke 1570 495 M
 0 3 V
 0 3 V
 1 -3 V
@@ -9070,8 +9099,8 @@ stroke 1570 492 M
 0 -4 V
 0 -3 V
 1 0 V
-stroke 1596 517 M
 0 -3 V
+stroke 1596 514 M
 1 0 V
 1 0 V
 1 0 V
@@ -9175,8 +9204,8 @@ stroke 1596 517 M
 0 -3 V
 1 -4 V
 0 -3 V
-stroke 1648 596 M
 0 -3 V
+stroke 1648 593 M
 0 -3 V
 0 -3 V
 0 -3 V
@@ -9280,8 +9309,8 @@ stroke 1648 596 M
 0 -3 V
 0 -4 V
 0 -6 V
-stroke 1698 457 M
 0 -3 V
+stroke 1698 454 M
 0 -3 V
 1 0 V
 1 0 V
@@ -9385,8 +9414,8 @@ stroke 1698 457 M
 0 6 V
 0 7 V
 0 6 V
-stroke 2422 514 M
 0 6 V
+stroke 2422 520 M
 1 4 V
 0 3 V
 0 3 V
@@ -9490,8 +9519,8 @@ stroke 2422 514 M
 0 -3 V
 1 3 V
 0 6 V
-stroke 2646 457 M
 0 6 V
+stroke 2646 463 M
 0 4 V
 0 3 V
 0 6 V
@@ -9595,8 +9624,8 @@ stroke 2646 457 M
 0 3 V
 1 0 V
 0 -3 V
-stroke 2680 448 M
 0 3 V
+stroke 2680 451 M
 0 -3 V
 0 6 V
 1 -6 V
@@ -9700,8 +9729,8 @@ stroke 2680 448 M
 1 0 V
 1 0 V
 1 -3 V
-stroke 2709 448 M
 0 6 V
+stroke 2709 454 M
 0 3 V
 0 -3 V
 0 -3 V
@@ -9805,8 +9834,8 @@ stroke 2709 448 M
 0 3 V
 0 -3 V
 0 -3 V
-stroke 2813 448 M
 0 6 V
+stroke 2813 454 M
 1 6 V
 0 -3 V
 0 -9 V
@@ -9910,8 +9939,8 @@ stroke 2813 448 M
 0 3 V
 1 0 V
 0 3 V
-stroke 2931 457 M
 0 6 V
+stroke 2931 463 M
 0 7 V
 0 3 V
 0 3 V
@@ -10015,8 +10044,8 @@ stroke 2931 457 M
 0 -3 V
 217 0 R
 0 3 V
-stroke 3386 451 M
 0 3 V
+stroke 3386 454 M
 0 3 V
 0 -3 V
 1 -6 V
@@ -10120,8 +10149,8 @@ stroke 3386 451 M
 0 4 V
 0 3 V
 0 3 V
-stroke 3453 473 M
 1 0 V
+stroke 3454 473 M
 0 3 V
 0 3 V
 0 -3 V
@@ -10225,8 +10254,8 @@ stroke 3453 473 M
 0 -3 V
 0 3 V
 0 3 V
-stroke 3653 482 M
 0 7 V
+stroke 3653 489 M
 1 0 V
 0 -3 V
 0 3 V
@@ -10330,8 +10359,8 @@ stroke 3653 482 M
 0 -3 V
 0 6 V
 0 6 V
-stroke 3990 460 M
 1 -6 V
+stroke 3991 454 M
 0 -6 V
 0 6 V
 0 6 V
@@ -10435,9 +10464,9 @@ stroke 3990 460 M
 0 3 V
 0 -9 V
 1 -6 V
-stroke 4051 448 M
 66 0 R
 0 3 V
+stroke 4117 451 M
 0 3 V
 0 -3 V
 0 -3 V
@@ -10540,9 +10569,9 @@ stroke 4051 448 M
 0 3 V
 1 0 V
 1 0 V
-stroke 4425 533 M
 0 -3 V
 0 -3 V
+stroke 4425 527 M
 0 -7 V
 0 -3 V
 0 -3 V
@@ -10637,18 +10666,17 @@ stroke 4425 533 M
 0 -3 V
 0 6 V
 0 -6 V
-0 3 V
-1 0 V
+1 3 V
 0 3 V
 0 -3 V
 0 -3 V
 0 3 V
 1 -3 V
 0 3 V
-stroke 4719 451 M
 0 -3 V
 0 3 V
 1 3 V
+stroke 4720 454 M
 0 3 V
 0 3 V
 0 -3 V
@@ -10750,10 +10778,10 @@ stroke 4719 451 M
 1 0 V
 0 -3 V
 0 -3 V
-stroke 4745 492 M
 0 -3 V
 0 -3 V
 0 -4 V
+stroke 4745 482 M
 0 -3 V
 1 -3 V
 0 3 V
@@ -10855,10 +10883,10 @@ stroke 4745 492 M
 0 3 V
 0 3 V
 0 3 V
-stroke 4767 482 M
 1 0 V
 0 4 V
 0 3 V
+stroke 4768 489 M
 0 3 V
 1 6 V
 0 7 V
@@ -10960,10 +10988,10 @@ stroke 4767 482 M
 1 0 V
 0 -3 V
 1 6 V
-stroke 4867 457 M
 0 3 V
 0 3 V
 0 4 V
+stroke 4867 467 M
 0 3 V
 1 0 V
 0 3 V
@@ -11065,10 +11093,10 @@ stroke 4867 457 M
 0 3 V
 1 3 V
 0 3 V
-stroke 4889 808 M
 0 3 V
 0 3 V
 0 4 V
+stroke 4889 818 M
 0 3 V
 0 3 V
 1 3 V
@@ -11170,10 +11198,10 @@ stroke 4889 808 M
 0 -3 V
 1 3 V
 0 -3 V
-stroke 4976 448 M
 0 3 V
 0 -3 V
 1 3 V
+stroke 4977 451 M
 0 -3 V
 0 3 V
 0 -3 V
@@ -11275,11 +11303,11 @@ stroke 4976 448 M
 0 -3 V
 1 3 V
 0 -3 V
-stroke 5006 448 M
 0 3 V
 0 -3 V
 1 0 R
 0 3 V
+stroke 5007 451 M
 0 -3 V
 0 3 V
 1 0 V
@@ -11380,11 +11408,11 @@ stroke 5006 448 M
 1 10 V
 0 6 V
 0 6 V
-stroke 5036 618 M
 0 7 V
 0 6 V
 0 3 V
 0 3 V
+stroke 5036 637 M
 1 7 V
 0 3 V
 0 3 V
@@ -11485,11 +11513,11 @@ stroke 5036 618 M
 0 -3 V
 1 -3 V
 0 -3 V
-stroke 5072 565 M
 1 0 V
 0 -4 V
 1 -3 V
 0 -3 V
+stroke 5074 555 M
 0 -3 V
 0 -3 V
 0 -3 V
@@ -11539,6 +11567,7 @@ stroke 5072 565 M
 % Begin plot #18
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1134 448 M
 0 3 V
@@ -11718,6 +11747,7 @@ stroke 1159 448 M
 % Begin plot #19
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2400 448 M
 0 3 V
@@ -12073,6 +12103,7 @@ stroke 3329 451 M
 % Begin plot #20
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2184 448 M
 1 6 V
@@ -12160,6 +12191,7 @@ LT1
 % Begin plot #21
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1171 448 M
 0 3 V
@@ -12517,6 +12549,7 @@ stroke 4486 451 M
 % Begin plot #22
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 917 448 M
 0 3 V
@@ -14072,6 +14105,7 @@ stroke 5281 451 M
 % Begin plot #23
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1139 448 M
 0 3 V
@@ -14421,6 +14455,7 @@ stroke 4228 473 M
 % Begin plot #24
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1183 448 M
 1 3 V
@@ -14779,6 +14814,7 @@ stroke 5233 451 M
 % Begin plot #25
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1370 448 M
 0 3 V
@@ -14930,6 +14966,7 @@ stroke 4883 448 M
 % Begin plot #26
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1785 448 M
 0 6 V
@@ -15186,6 +15223,7 @@ stroke 3841 448 M
 % Begin plot #27
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1780 448 M
 0 6 V
@@ -15259,6 +15297,7 @@ LT8
 % Begin plot #28
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 3210 448 M
 0 6 V
@@ -15378,6 +15417,7 @@ stroke 3615 448 M
 % Begin plot #29
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1375 448 M
 0 3 V
@@ -16857,6 +16897,7 @@ stroke 4905 457 M
 % Begin plot #30
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 3741 448 M
 0 3 V
@@ -17002,6 +17043,7 @@ stroke 4438 482 M
 % Begin plot #31
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 892 448 M
 0 3 V
@@ -17314,12 +17356,11 @@ stroke 1529 454 M
 0 -3 V
 0 3 V
 0 3 V
-0 6 V
-1 0 V
+1 6 V
 0 -3 V
 0 -3 V
-stroke 1560 590 M
 0 -3 V
+stroke 1560 587 M
 1 -3 V
 0 3 V
 0 -3 V
@@ -17423,8 +17464,8 @@ stroke 1560 590 M
 0 -6 V
 0 -7 V
 0 -6 V
-stroke 1579 454 M
 1 -3 V
+stroke 1580 451 M
 0 -3 V
 109 0 R
 0 3 V
@@ -17528,8 +17569,8 @@ stroke 1579 454 M
 0 -3 V
 0 -6 V
 0 3 V
-stroke 1973 451 M
 1 3 V
+stroke 1974 454 M
 0 -6 V
 0 3 V
 0 6 V
@@ -17633,8 +17674,8 @@ stroke 1973 451 M
 0 4 V
 0 3 V
 1 0 V
-stroke 2084 489 M
 0 3 V
+stroke 2084 492 M
 0 3 V
 0 3 V
 0 3 V
@@ -17738,8 +17779,8 @@ stroke 2084 489 M
 0 3 V
 0 3 V
 1 3 V
-stroke 2197 972 M
 0 4 V
+stroke 2197 976 M
 0 3 V
 0 3 V
 0 3 V
@@ -17843,8 +17884,8 @@ stroke 2197 972 M
 0 -6 V
 0 -7 V
 0 -3 V
-stroke 2215 1244 M
 1 -6 V
+stroke 2216 1238 M
 0 -3 V
 0 -6 V
 0 -7 V
@@ -17948,8 +17989,8 @@ stroke 2215 1244 M
 0 -3 V
 0 -4 V
 0 -3 V
-stroke 2233 811 M
 0 -3 V
+stroke 2233 808 M
 1 -3 V
 0 -3 V
 0 -3 V
@@ -18053,8 +18094,8 @@ stroke 2233 811 M
 0 -3 V
 0 -3 V
 0 -3 V
-stroke 2279 590 M
 1 -3 V
+stroke 2280 587 M
 0 -3 V
 0 -4 V
 0 -3 V
@@ -18158,8 +18199,8 @@ stroke 2279 590 M
 0 -3 V
 11 0 R
 0 3 V
-stroke 2357 451 M
 0 -3 V
+stroke 2357 448 M
 9 0 R
 0 3 V
 1 0 V
@@ -18263,8 +18304,8 @@ stroke 2357 451 M
 0 -6 V
 0 -3 V
 0 -3 V
-stroke 2718 448 M
 0 6 V
+stroke 2718 454 M
 1 3 V
 0 -9 V
 0 6 V
@@ -18368,8 +18409,8 @@ stroke 2718 448 M
 1 0 V
 0 -3 V
 0 3 V
-stroke 3453 495 M
 1 -3 V
+stroke 3454 492 M
 0 -3 V
 0 -7 V
 1 -6 V
@@ -18473,8 +18514,8 @@ stroke 3453 495 M
 0 3 V
 0 -6 V
 0 3 V
-stroke 3820 451 M
 0 3 V
+stroke 3820 454 M
 1 -3 V
 0 -3 V
 0 3 V
@@ -18578,8 +18619,8 @@ stroke 3820 451 M
 0 3 V
 0 -3 V
 1 3 V
-stroke 4308 457 M
 0 3 V
+stroke 4308 460 M
 0 3 V
 0 -3 V
 0 -6 V
@@ -18683,8 +18724,8 @@ stroke 4308 457 M
 1 3 V
 0 -3 V
 0 3 V
-stroke 4462 451 M
 1 -3 V
+stroke 4463 448 M
 0 3 V
 0 -3 V
 273 0 R
@@ -18788,8 +18829,8 @@ stroke 4462 451 M
 0 3 V
 0 3 V
 0 3 V
-stroke 4762 659 M
 1 4 V
+stroke 4763 663 M
 0 3 V
 0 -7 V
 1 -6 V
@@ -18893,8 +18934,8 @@ stroke 4762 659 M
 0 3 V
 1 0 V
 1 0 V
-stroke 4839 457 M
 1 0 V
+stroke 4840 457 M
 1 0 V
 1 0 V
 1 0 V
@@ -18998,8 +19039,8 @@ stroke 4839 457 M
 0 3 V
 0 3 V
 0 3 V
-stroke 4875 653 M
 0 3 V
+stroke 4875 656 M
 0 3 V
 1 4 V
 0 3 V
@@ -19103,8 +19144,8 @@ stroke 4875 653 M
 1 -3 V
 0 -3 V
 0 -3 V
-stroke 4898 543 M
 0 -4 V
+stroke 4898 539 M
 0 -3 V
 0 -3 V
 0 -3 V
@@ -19208,8 +19249,8 @@ stroke 4898 543 M
 0 6 V
 1 3 V
 0 7 V
-stroke 5004 644 M
 0 3 V
+stroke 5004 647 M
 0 6 V
 0 3 V
 0 7 V
@@ -19313,8 +19354,8 @@ stroke 5004 644 M
 0 -3 V
 0 -3 V
 0 -3 V
-stroke 5039 628 M
 0 -3 V
+stroke 5039 625 M
 0 -3 V
 0 -4 V
 1 -3 V
@@ -19418,8 +19459,8 @@ stroke 5039 628 M
 0 10 V
 0 9 V
 1 3 V
-stroke 5062 751 M
 0 6 V
+stroke 5062 757 M
 0 7 V
 0 -3 V
 0 -7 V
@@ -19508,6 +19549,7 @@ stroke 5062 751 M
 % Begin plot #32
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1285 448 M
 0 6 V
@@ -19894,8 +19936,8 @@ stroke 1542 451 M
 0 -3 V
 0 -3 V
 0 -3 V
-0 -3 V
-1 3 V
+1 -3 V
+0 3 V
 0 3 V
 0 6 V
 0 4 V
@@ -21857,6 +21899,7 @@ stroke 4988 489 M
 % Begin plot #33
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1375 448 M
 0 6 V
@@ -22070,6 +22113,7 @@ stroke 1544 527 M
 % Begin plot #34
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1184 448 M
 0 3 V
@@ -24318,6 +24362,7 @@ stroke 5420 448 M
 % Begin plot #35
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2781 448 M
 0 3 V
@@ -24652,6 +24697,7 @@ stroke 4499 448 M
 % Begin plot #36
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1184 448 M
 0 3 V
@@ -26414,6 +26460,7 @@ stroke 5155 451 M
 % Begin plot #37
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 891 448 M
 0 6 V
@@ -28506,6 +28553,7 @@ stroke 5395 454 M
 % Begin plot #38
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1184 448 M
 0 3 V
@@ -29146,6 +29194,7 @@ stroke 5064 448 M
 % Begin plot #39
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 917 448 M
 0 3 V
@@ -29607,7 +29656,8 @@ stroke 1549 457 M
 1 0 V
 0 3 V
 0 -3 V
-1 3 V
+1 0 V
+0 3 V
 0 -3 V
 0 3 V
 0 -3 V
@@ -29671,8 +29721,8 @@ stroke 1549 457 M
 0 3 V
 0 -3 V
 1 3 V
+stroke 1576 451 M
 0 3 V
-stroke 1576 454 M
 0 -3 V
 0 -3 V
 0 3 V
@@ -29776,8 +29826,8 @@ stroke 1576 454 M
 1 3 V
 0 -3 V
 0 3 V
+stroke 1597 451 M
 1 -3 V
-stroke 1598 448 M
 0 3 V
 0 -3 V
 0 3 V
@@ -29881,8 +29931,8 @@ stroke 1598 448 M
 1 0 V
 0 3 V
 0 4 V
+stroke 1630 641 M
 0 3 V
-stroke 1630 644 M
 1 6 V
 0 3 V
 0 3 V
@@ -29986,8 +30036,8 @@ stroke 1630 644 M
 1 -3 V
 0 -4 V
 0 -3 V
+stroke 1652 479 M
 0 -3 V
-stroke 1652 476 M
 0 -3 V
 1 0 V
 0 -3 V
@@ -30091,8 +30141,8 @@ stroke 1652 476 M
 0 3 V
 0 3 V
 0 3 V
+stroke 2096 460 M
 0 -3 V
-stroke 2096 457 M
 0 -9 V
 1 0 R
 0 6 V
@@ -30196,8 +30246,8 @@ stroke 2096 457 M
 0 -3 V
 0 6 V
 1 0 V
+stroke 2382 454 M
 0 -6 V
-stroke 2382 448 M
 18 0 R
 1 3 V
 0 3 V
@@ -30301,9 +30351,9 @@ stroke 2382 448 M
 1 -3 V
 0 3 V
 0 -3 V
+stroke 2435 448 M
 1 0 R
 0 3 V
-stroke 2436 451 M
 0 -3 V
 87 0 R
 0 3 V
@@ -30406,9 +30456,9 @@ stroke 2436 451 M
 0 3 V
 1 0 V
 0 -3 V
+stroke 2652 448 M
 0 3 V
 1 0 V
-stroke 2653 451 M
 0 3 V
 0 -3 V
 1 0 V
@@ -30511,9 +30561,9 @@ stroke 2653 451 M
 0 3 V
 0 3 V
 0 -3 V
+stroke 2697 451 M
 1 3 V
 0 -6 V
-stroke 2698 448 M
 0 3 V
 0 6 V
 1 -3 V
@@ -30616,10 +30666,10 @@ stroke 2698 448 M
 0 -3 V
 0 6 V
 0 -3 V
+stroke 2806 451 M
 0 -3 V
 1 0 R
 0 6 V
-stroke 2807 454 M
 0 9 V
 0 7 V
 0 -3 V
@@ -30721,10 +30771,10 @@ stroke 2807 454 M
 0 6 V
 1 3 V
 0 -3 V
+stroke 2828 454 M
 0 -6 V
 0 3 V
 0 3 V
-stroke 2828 454 M
 1 0 V
 0 -6 V
 0 3 V
@@ -30826,10 +30876,10 @@ stroke 2828 454 M
 0 -6 V
 0 -6 V
 1 6 V
+stroke 3675 454 M
 0 -6 V
 0 6 V
 0 3 V
-stroke 3675 457 M
 0 -3 V
 1 -6 V
 0 3 V
@@ -30932,9 +30982,9 @@ stroke 3675 457 M
 0 -6 V
 1 0 R
 0 3 V
+stroke 3992 451 M
 0 3 V
 0 3 V
-stroke 3992 457 M
 1 -3 V
 0 3 V
 0 -6 V
@@ -31037,9 +31087,9 @@ stroke 3992 457 M
 0 7 V
 0 -7 V
 0 -6 V
+stroke 4036 454 M
 0 -6 V
 0 6 V
-stroke 4036 454 M
 1 3 V
 0 3 V
 0 -3 V
@@ -31142,9 +31192,9 @@ stroke 4036 454 M
 0 -10 V
 0 -9 V
 0 -3 V
+stroke 4121 486 M
 0 -4 V
 0 -3 V
-stroke 4121 479 M
 1 -6 V
 0 -3 V
 0 3 V
@@ -31247,9 +31297,9 @@ stroke 4121 479 M
 0 3 V
 0 -3 V
 0 3 V
+stroke 4184 451 M
 0 -3 V
 0 6 V
-stroke 4184 454 M
 1 -6 V
 0 9 V
 0 3 V
@@ -31352,9 +31402,9 @@ stroke 4184 454 M
 0 4 V
 0 3 V
 0 3 V
+stroke 4207 473 M
 0 3 V
 1 3 V
-stroke 4208 479 M
 0 3 V
 0 4 V
 0 3 V
@@ -31457,9 +31507,9 @@ stroke 4208 479 M
 0 3 V
 0 -3 V
 0 3 V
+stroke 4234 451 M
 1 -3 V
 0 3 V
-stroke 4235 451 M
 0 -3 V
 1 3 V
 0 -3 V
@@ -31562,9 +31612,9 @@ stroke 4235 451 M
 0 -3 V
 1 6 V
 0 -3 V
+stroke 4975 451 M
 0 -3 V
 1 3 V
-stroke 4976 451 M
 0 -3 V
 0 9 V
 0 -6 V
@@ -31667,9 +31717,9 @@ stroke 4976 451 M
 0 3 V
 1 3 V
 0 -9 V
+stroke 4999 448 M
 0 6 V
 0 -6 V
-stroke 4999 448 M
 1 3 V
 0 -3 V
 0 3 V
@@ -31773,8 +31823,8 @@ stroke 4999 448 M
 0 -3 V
 1 0 R
 0 3 V
+stroke 5045 451 M
 0 -3 V
-stroke 5045 448 M
 0 3 V
 0 3 V
 0 -6 V
@@ -31878,8 +31928,8 @@ stroke 5045 448 M
 0 -3 V
 0 6 V
 1 -3 V
+stroke 5070 451 M
 0 3 V
-stroke 5070 454 M
 1 3 V
 0 -3 V
 0 -6 V
@@ -31983,8 +32033,8 @@ stroke 5070 454 M
 0 6 V
 0 -3 V
 1 -3 V
+stroke 5292 448 M
 0 6 V
-stroke 5292 454 M
 0 -3 V
 1 -3 V
 0 3 V
@@ -32015,6 +32065,7 @@ stroke 5292 454 M
 % Begin plot #40
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1304 448 M
 0 3 V
@@ -32127,6 +32178,7 @@ stroke 4890 451 M
 % Begin plot #41
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2643 448 M
 0 6 V
@@ -32170,6 +32222,7 @@ LT4
 % Begin plot #42
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 856 448 M
 0 6 V
@@ -32547,6 +32600,7 @@ stroke 4883 473 M
 % Begin plot #43
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 893 448 M
 0 3 V
@@ -32924,6 +32978,7 @@ stroke 4234 460 M
 % Begin plot #44
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 3667 448 M
 1 6 V
@@ -33070,6 +33125,7 @@ stroke 4592 451 M
 % Begin plot #45
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 841 448 M
 0 6 V
@@ -33706,6 +33762,7 @@ stroke 4269 448 M
 % Begin plot #46
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1938 448 M
 0 6 V
@@ -33985,6 +34042,7 @@ stroke 3537 448 M
 % Begin plot #47
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1635 448 M
 0 6 V
@@ -34324,6 +34382,7 @@ stroke 5422 451 M
 % Begin plot #48
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1341 448 M
 0 3 V
@@ -34497,6 +34556,7 @@ stroke 3675 448 M
 % Begin plot #49
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 3424 448 M
 1 6 V
@@ -34570,6 +34630,7 @@ LT3
 % Begin plot #50
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1535 448 M
 0 6 V
@@ -34640,8 +34701,7 @@ LT4
 1 0 V
 0 -3 V
 0 -3 V
-0 -4 V
-1 0 V
+1 -4 V
 1 0 V
 1 0 V
 1 0 V
@@ -34986,11 +35046,13 @@ stroke 3936 448 M
 % Begin plot #51
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 % End plot #51
 % Begin plot #52
 1.000 UL
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 901 448 M
 0 6 V
@@ -35172,6 +35234,7 @@ stroke 4981 457 M
 % Begin plot #53
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2146 448 M
 0 6 V
@@ -35878,6 +35941,7 @@ stroke 5052 460 M
 % Begin plot #54
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1033 448 M
 0 3 V
@@ -36820,6 +36884,7 @@ stroke 5134 448 M
 % Begin plot #55
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1256 448 M
 0 3 V
@@ -36869,6 +36934,7 @@ LT0
 % Begin plot #56
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 770 448 M
 0 3 V
@@ -37044,6 +37110,7 @@ stroke 5397 451 M
 % Begin plot #57
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1134 448 M
 0 3 V
@@ -37955,6 +38022,7 @@ stroke 4234 618 M
 % Begin plot #58
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1198 448 M
 0 3 V
@@ -40596,6 +40664,7 @@ stroke 5372 451 M
 % Begin plot #59
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1172 448 M
 0 3 V
@@ -43050,6 +43119,7 @@ stroke 5366 448 M
 % Begin plot #60
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1172 448 M
 0 3 V
@@ -45136,6 +45206,7 @@ stroke 5356 457 M
 % Begin plot #61
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 933 448 M
 0 3 V
@@ -47145,6 +47216,7 @@ stroke 5078 473 M
 % Begin plot #62
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 891 448 M
 1 3 V
@@ -50220,8 +50292,8 @@ stroke 4711 448 M
 0 -3 V
 0 9 V
 0 6 V
-0 -3 V
-1 -6 V
+1 -3 V
+0 -6 V
 0 -3 V
 0 -3 V
 1 0 R
@@ -50798,6 +50870,7 @@ stroke 5398 451 M
 % Begin plot #63
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 901 448 M
 0 3 V
@@ -52233,6 +52306,7 @@ stroke 5049 448 M
 % Begin plot #64
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1496 448 M
 0 3 V
@@ -52324,6 +52398,7 @@ LT0
 % Begin plot #65
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 770 448 M
 0 3 V
@@ -53697,6 +53772,7 @@ stroke 5414 454 M
 % Begin plot #66
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 917 448 M
 0 3 V
@@ -53922,8 +53998,7 @@ stroke 1556 451 M
 0 -3 V
 0 6 V
 0 -6 V
-0 3 V
-1 0 V
+1 3 V
 0 -3 V
 0 6 V
 0 -3 V
@@ -54014,8 +54089,8 @@ stroke 1556 451 M
 0 3 V
 0 -3 V
 0 6 V
-stroke 1579 454 M
 0 -3 V
+stroke 1579 451 M
 1 0 V
 0 -3 V
 0 3 V
@@ -54119,8 +54194,8 @@ stroke 1579 454 M
 0 3 V
 0 -3 V
 0 3 V
-stroke 1599 451 M
 0 -3 V
+stroke 1599 448 M
 0 3 V
 1 -3 V
 0 3 V
@@ -54224,8 +54299,8 @@ stroke 1599 451 M
 141 0 R
 0 6 V
 0 3 V
-stroke 2523 457 M
 0 -3 V
+stroke 2523 454 M
 1 -3 V
 1 0 V
 0 -3 V
@@ -54329,8 +54404,8 @@ stroke 2523 457 M
 1 0 V
 0 -3 V
 0 -6 V
-stroke 2653 448 M
 0 3 V
+stroke 2653 451 M
 0 6 V
 0 -3 V
 1 -6 V
@@ -54434,8 +54509,8 @@ stroke 2653 448 M
 0 3 V
 0 -6 V
 1 0 V
-stroke 2820 451 M
 0 -3 V
+stroke 2820 448 M
 0 3 V
 1 3 V
 0 3 V
@@ -54539,8 +54614,8 @@ stroke 2820 451 M
 1 -3 V
 0 6 V
 0 -6 V
-stroke 3060 448 M
 0 3 V
+stroke 3060 451 M
 1 0 V
 0 3 V
 0 -6 V
@@ -54644,8 +54719,8 @@ stroke 3060 448 M
 0 -6 V
 0 6 V
 0 -6 V
-stroke 4111 448 M
 0 6 V
+stroke 4111 454 M
 0 6 V
 1 -3 V
 0 -9 V
@@ -54749,8 +54824,8 @@ stroke 4111 448 M
 1 0 V
 0 -3 V
 0 3 V
-stroke 4220 451 M
 0 -3 V
+stroke 4220 448 M
 1 0 R
 0 3 V
 0 3 V
@@ -54854,8 +54929,8 @@ stroke 4220 451 M
 0 6 V
 1 -3 V
 1 0 V
-stroke 4244 451 M
 0 -3 V
+stroke 4244 448 M
 0 6 V
 0 -3 V
 1 0 V
@@ -54887,6 +54962,7 @@ stroke 4244 451 M
 % Begin plot #67
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1657 448 M
 0 3 V
@@ -54990,6 +55066,7 @@ LT3
 % Begin plot #68
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1221 448 M
 0 3 V
@@ -55372,6 +55449,7 @@ stroke 4987 451 M
 % Begin plot #69
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 917 448 M
 0 3 V
@@ -55570,8 +55648,8 @@ stroke 1539 451 M
 1 3 V
 0 3 V
 0 -3 V
-0 -3 V
-1 3 V
+1 -3 V
+0 3 V
 0 3 V
 0 3 V
 0 -3 V
@@ -57005,6 +57083,7 @@ stroke 5285 451 M
 % Begin plot #70
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1496 448 M
 0 3 V
@@ -58436,6 +58515,7 @@ stroke 4759 451 M
 % Begin plot #71
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 4777 448 M
 0 6 V
@@ -58476,6 +58556,7 @@ LT7
 % Begin plot #72
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1611 448 M
 0 6 V
@@ -58609,6 +58690,7 @@ stroke 3556 451 M
 % Begin plot #73
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1307 448 M
 0 6 V
@@ -58786,6 +58868,7 @@ stroke 4457 587 M
 % Begin plot #74
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1135 448 M
 0 3 V
@@ -62272,8 +62355,8 @@ stroke 4713 448 M
 1 -3 V
 0 -3 V
 0 -3 V
-0 3 V
 1 3 V
+0 3 V
 0 -3 V
 1 3 V
 0 -6 V
@@ -62532,6 +62615,7 @@ stroke 4772 486 M
 % Begin plot #75
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1053 448 M
 0 3 V
@@ -63214,6 +63298,7 @@ stroke 5056 593 M
 % Begin plot #76
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1563 448 M
 0 3 V
@@ -64003,6 +64088,7 @@ stroke 5148 454 M
 % Begin plot #77
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2374 448 M
 1 6 V
@@ -64060,6 +64146,7 @@ LT4
 % Begin plot #78
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1170 448 M
 0 3 V
@@ -64371,6 +64458,7 @@ stroke 3142 451 M
 % Begin plot #79
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1185 448 M
 0 3 V
@@ -65103,6 +65191,7 @@ stroke 4903 448 M
 % Begin plot #80
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1016 448 M
 0 3 V
@@ -65332,8 +65421,7 @@ stroke 1555 539 M
 0 3 V
 0 3 V
 0 3 V
-0 -3 V
-1 0 V
+1 -3 V
 0 3 V
 0 7 V
 0 6 V
@@ -65419,8 +65507,8 @@ stroke 1555 539 M
 0 -3 V
 1 -3 V
 0 -7 V
-stroke 1582 754 M
 0 -3 V
+stroke 1582 751 M
 0 -3 V
 0 -3 V
 0 -3 V
@@ -65524,8 +65612,8 @@ stroke 1582 754 M
 0 3 V
 0 3 V
 0 4 V
-stroke 1607 799 M
 1 3 V
+stroke 1608 802 M
 0 3 V
 0 3 V
 0 6 V
@@ -65629,8 +65717,8 @@ stroke 1607 799 M
 0 -3 V
 0 -3 V
 0 6 V
-stroke 1627 966 M
 0 -3 V
+stroke 1627 963 M
 1 3 V
 0 -3 V
 0 3 V
@@ -65734,8 +65822,8 @@ stroke 1627 966 M
 0 -7 V
 1 -6 V
 0 -6 V
-stroke 1648 663 M
 0 -4 V
+stroke 1648 659 M
 0 -3 V
 0 -3 V
 1 -6 V
@@ -65839,8 +65927,8 @@ stroke 1648 663 M
 1 3 V
 0 -3 V
 0 3 V
-stroke 1679 451 M
 0 -3 V
+stroke 1679 448 M
 1 0 R
 0 3 V
 0 -3 V
@@ -65944,8 +66032,8 @@ stroke 1679 451 M
 0 -6 V
 0 3 V
 1 -3 V
-stroke 2123 448 M
 0 3 V
+stroke 2123 451 M
 0 6 V
 0 3 V
 0 7 V
@@ -66049,8 +66137,8 @@ stroke 2123 448 M
 0 3 V
 0 -3 V
 0 6 V
-stroke 2145 460 M
 0 3 V
+stroke 2145 463 M
 0 -9 V
 1 0 V
 0 -6 V
@@ -66154,8 +66242,8 @@ stroke 2145 460 M
 0 3 V
 0 4 V
 0 3 V
-stroke 2178 606 M
 0 3 V
+stroke 2178 609 M
 0 3 V
 1 3 V
 1 0 V
@@ -66259,8 +66347,8 @@ stroke 2178 606 M
 0 6 V
 0 7 V
 0 6 V
-stroke 2196 1137 M
 0 6 V
+stroke 2196 1143 M
 1 6 V
 0 7 V
 0 6 V
@@ -66364,8 +66452,8 @@ stroke 2196 1137 M
 0 3 V
 0 3 V
 0 4 V
-stroke 2221 1349 M
 1 0 V
+stroke 2222 1349 M
 0 -7 V
 0 3 V
 0 4 V
@@ -66469,8 +66557,8 @@ stroke 2221 1349 M
 1 0 V
 0 4 V
 0 3 V
-stroke 2246 1273 M
 0 3 V
+stroke 2246 1276 M
 0 3 V
 0 3 V
 1 0 V
@@ -66574,8 +66662,8 @@ stroke 2246 1273 M
 0 -7 V
 0 -6 V
 0 -6 V
-stroke 2265 1368 M
 0 -7 V
+stroke 2265 1361 M
 0 -6 V
 0 -6 V
 1 -7 V
@@ -66679,8 +66767,8 @@ stroke 2265 1368 M
 0 -3 V
 1 0 V
 0 3 V
-stroke 2285 938 M
 0 3 V
+stroke 2285 941 M
 0 3 V
 1 0 V
 0 3 V
@@ -66784,8 +66872,8 @@ stroke 2285 938 M
 0 -3 V
 0 -3 V
 0 -3 V
-stroke 2305 783 M
 1 -3 V
+stroke 2306 780 M
 0 -7 V
 0 -3 V
 0 -3 V
@@ -66889,8 +66977,8 @@ stroke 2305 783 M
 0 -3 V
 1 0 V
 0 3 V
-stroke 2326 470 M
 0 3 V
+stroke 2326 473 M
 0 3 V
 0 3 V
 0 3 V
@@ -66994,8 +67082,8 @@ stroke 2326 470 M
 0 -6 V
 1 0 R
 0 6 V
-stroke 2353 454 M
 1 0 V
+stroke 2354 454 M
 1 0 V
 0 -3 V
 0 3 V
@@ -67099,8 +67187,8 @@ stroke 2353 454 M
 0 -4 V
 0 4 V
 1 0 V
-stroke 2424 486 M
 0 3 V
+stroke 2424 489 M
 1 3 V
 0 -3 V
 0 -3 V
@@ -67204,8 +67292,8 @@ stroke 2424 486 M
 0 -6 V
 0 3 V
 1 -3 V
-stroke 2653 448 M
 0 6 V
+stroke 2653 454 M
 0 -3 V
 0 -3 V
 1 3 V
@@ -67309,8 +67397,8 @@ stroke 2653 448 M
 0 6 V
 0 -3 V
 1 0 V
-stroke 2687 451 M
 0 6 V
+stroke 2687 457 M
 0 -3 V
 0 -6 V
 0 3 V
@@ -67414,8 +67502,8 @@ stroke 2687 451 M
 1 0 V
 0 -3 V
 0 3 V
-stroke 2716 451 M
 0 -3 V
+stroke 2716 448 M
 0 6 V
 1 6 V
 0 3 V
@@ -67519,8 +67607,8 @@ stroke 2716 451 M
 0 -6 V
 1 -7 V
 0 -3 V
-stroke 2931 457 M
 0 3 V
+stroke 2931 460 M
 0 7 V
 0 3 V
 1 3 V
@@ -69956,6 +70044,7 @@ stroke 5370 451 M
 % Begin plot #81
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1173 448 M
 0 3 V
@@ -71439,6 +71528,7 @@ stroke 5127 454 M
 % Begin plot #82
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 4305 448 M
 0 6 V
@@ -71537,6 +71627,7 @@ LT0
 % Begin plot #83
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1052 448 M
 0 6 V
@@ -71641,6 +71732,7 @@ LT1
 % Begin plot #84
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 856 448 M
 0 3 V
@@ -75497,6 +75589,7 @@ stroke 5358 454 M
 % Begin plot #85
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1193 448 M
 0 6 V
@@ -75657,6 +75750,7 @@ stroke 2182 460 M
 % Begin plot #86
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 770 448 M
 1 3 V
@@ -77618,6 +77712,7 @@ stroke 5403 460 M
 % Begin plot #87
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 826 448 M
 1 3 V
@@ -78193,6 +78288,7 @@ stroke 4757 451 M
 % Begin plot #88
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1198 448 M
 0 3 V
@@ -79764,6 +79860,7 @@ stroke 4749 457 M
 % Begin plot #89
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 916 448 M
 1 6 V
@@ -79914,6 +80011,7 @@ stroke 5219 451 M
 % Begin plot #90
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1167 448 M
 0 3 V
@@ -80068,6 +80166,7 @@ stroke 2427 451 M
 % Begin plot #91
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 771 448 M
 0 3 V
@@ -81925,6 +82024,7 @@ stroke 4658 451 M
 % Begin plot #92
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1503 448 M
 0 3 V
@@ -82078,6 +82178,7 @@ stroke 4219 451 M
 % Begin plot #93
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2642 448 M
 0 6 V
@@ -82174,6 +82275,7 @@ LT2
 % Begin plot #94
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 770 448 M
 0 9 V
@@ -82271,6 +82373,7 @@ LT3
 % Begin plot #95
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 771 448 M
 0 3 V
@@ -83691,6 +83794,7 @@ stroke 4967 454 M
 % Begin plot #96
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2137 448 M
 1 6 V
@@ -83986,6 +84090,7 @@ stroke 4540 448 M
 % Begin plot #97
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2121 448 M
 0 3 V
@@ -85209,6 +85314,7 @@ stroke 3566 451 M
 % Begin plot #98
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 2115 448 M
 0 3 V
@@ -85328,6 +85434,7 @@ stroke 3800 451 M
 % Begin plot #99
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 1285 448 M
 0 3 V
@@ -85532,15 +85639,14 @@ stroke 1535 451 M
 1 -3 V
 0 3 V
 0 3 V
-0 3 V
-1 0 V
+1 3 V
 0 -3 V
 0 -6 V
 0 3 V
 0 -3 V
 1 0 V
-stroke 1561 451 M
 0 -3 V
+stroke 1561 448 M
 0 6 V
 0 3 V
 0 -3 V
@@ -85644,8 +85750,8 @@ stroke 1561 451 M
 0 -3 V
 0 3 V
 0 -3 V
-stroke 1591 448 M
 1 3 V
+stroke 1592 451 M
 0 -3 V
 0 3 V
 0 -3 V
@@ -85749,8 +85855,8 @@ stroke 1591 448 M
 0 4 V
 1 -4 V
 0 4 V
-stroke 1617 603 M
 0 -4 V
+stroke 1617 599 M
 1 0 V
 0 4 V
 0 3 V
@@ -85854,8 +85960,8 @@ stroke 1617 603 M
 1 3 V
 0 3 V
 0 3 V
-stroke 1646 852 M
 0 3 V
+stroke 1646 855 M
 0 4 V
 0 3 V
 1 6 V
@@ -85959,8 +86065,8 @@ stroke 1646 852 M
 1 -3 V
 0 -6 V
 0 -7 V
-stroke 1667 558 M
 0 -6 V
+stroke 1667 552 M
 0 -6 V
 0 -7 V
 1 -6 V
@@ -87175,6 +87281,7 @@ stroke 4991 448 M
 % End plot #99
 stroke
 LTb
+LCb setrgbcolor
 770 3609 N
 770 448 L
 4737 0 V
@@ -87184,6 +87291,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end

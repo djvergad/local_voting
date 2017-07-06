@@ -1,11 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: figures/simple_scen1.eps
-%%Creator: gnuplot 4.4 patchlevel 3
-<<<<<<< HEAD
-%%CreationDate: Fri Oct 11 16:16:35 2013
-=======
-%%CreationDate: Tue Sep 17 13:41:47 2013
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
+%%Creator: gnuplot 4.6 patchlevel 6
+%%CreationDate: Thu Jul  6 17:12:01 2017
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 338 251
 %%EndComments
@@ -24,14 +20,12 @@ gnudict begin
 /Level1 false def
 /Rounded false def
 /ClipToBoundingBox false def
+/SuppressPDFMark false def
 /TransparentPatterns false def
-<<<<<<< HEAD
 /gnulinewidth 10.000 def
-=======
-/gnulinewidth 5.000 def
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
 %
 /vshift -46 def
 /dl1 {
@@ -46,29 +40,6 @@ gnudict begin
 /vpt_ 31.5 def
 /hpt hpt_ def
 /vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (figures/simple_scen1.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 3)
-<<<<<<< HEAD
-  /Author (netsim)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Fri Oct 11 16:16:35 2013)
-=======
-  /Author (dimitriv)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Tue Sep 17 13:41:47 2013)
->>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
-  /DOCINFO pdfmark
-end
-} ifelse
 /doclip {
   ClipToBoundingBox {
     newpath 50 50 moveto 338 50 lineto 338 251 lineto 50 251 lineto closepath
@@ -76,7 +47,7 @@ end
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.6 (September 2012)
 %
 %/SuppressPDFMark true def
 %
@@ -343,7 +314,8 @@ end
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -476,8 +448,26 @@ currentdict end definefont pop
   Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
 /XYsave    { [( ) 1 2 true false 3 ()] } bind def
 /XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (figures/simple_scen1.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.6 patchlevel 6)
+  /Author (dimitriv)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Jul  6 17:12:01 2017)
+  /DOCINFO pdfmark
+end
+} ifelse
 end
 %%EndProlog
+%%Page: 1 1
 gnudict begin
 gsave
 doclip
@@ -486,8 +476,10 @@ doclip
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 5760.00 4030.00 BoxColFill} if
 1.000 UL
 LTb
+LCb setrgbcolor
 686 448 M
 63 0 V
 4758 0 R
@@ -498,6 +490,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 1080 M
 63 0 V
 4758 0 R
@@ -508,6 +501,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 1712 M
 63 0 V
 4758 0 R
@@ -518,6 +512,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 2345 M
 63 0 V
 4758 0 R
@@ -528,6 +523,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 2977 M
 63 0 V
 4758 0 R
@@ -538,6 +534,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 3609 M
 63 0 V
 4758 0 R
@@ -548,6 +545,7 @@ stroke
 ] -46.7 MRshow
 1.000 UL
 LTb
+LCb setrgbcolor
 686 448 M
 0 63 V
 0 3098 R
@@ -558,6 +556,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1375 448 M
 0 63 V
 0 3098 R
@@ -568,6 +567,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2063 448 M
 0 63 V
 0 3098 R
@@ -578,6 +578,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 2752 448 M
 0 63 V
 0 3098 R
@@ -588,6 +589,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3441 448 M
 0 63 V
 0 3098 R
@@ -598,6 +600,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4130 448 M
 0 63 V
 0 3098 R
@@ -608,6 +611,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 4818 448 M
 0 63 V
 0 3098 R
@@ -618,6 +622,7 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 5507 448 M
 0 63 V
 0 3098 R
@@ -628,8 +633,10 @@ stroke
 ] -46.7 MCshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 686 3609 N
 686 448 L
 4821 0 V
@@ -654,10 +661,13 @@ LTb
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
 1.000 UL
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 686 448 M
 14 0 V
 14 0 V
@@ -1016,6 +1026,7 @@ stroke 4984 448 M
 % Begin plot #2
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -1375,6 +1386,7 @@ stroke 4984 448 M
 % Begin plot #3
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -1734,6 +1746,7 @@ stroke 4984 448 M
 % Begin plot #4
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -2093,6 +2106,7 @@ stroke 4984 448 M
 % Begin plot #5
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -2452,6 +2466,7 @@ stroke 4984 448 M
 % Begin plot #6
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -2811,6 +2826,7 @@ stroke 4984 448 M
 % Begin plot #7
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -3170,6 +3186,7 @@ stroke 4984 448 M
 % Begin plot #8
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -3529,6 +3546,7 @@ stroke 4984 448 M
 % Begin plot #9
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -3888,6 +3906,7 @@ stroke 4984 448 M
 % Begin plot #10
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -4247,6 +4266,7 @@ stroke 4984 448 M
 % Begin plot #11
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -4606,6 +4626,7 @@ stroke 4984 448 M
 % Begin plot #12
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -4965,6 +4986,7 @@ stroke 4984 448 M
 % Begin plot #13
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -5324,6 +5346,7 @@ stroke 4984 448 M
 % Begin plot #14
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -5683,6 +5706,7 @@ stroke 4984 448 M
 % Begin plot #15
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -6042,6 +6066,7 @@ stroke 4984 448 M
 % Begin plot #16
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -6401,6 +6426,7 @@ stroke 4984 448 M
 % Begin plot #17
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -6760,6 +6786,7 @@ stroke 4984 448 M
 % Begin plot #18
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -7119,6 +7146,7 @@ stroke 4984 448 M
 % Begin plot #19
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -7478,6 +7506,7 @@ stroke 4984 448 M
 % Begin plot #20
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -7837,6 +7866,7 @@ stroke 4984 448 M
 % Begin plot #21
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -8196,6 +8226,7 @@ stroke 4984 448 M
 % Begin plot #22
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -8555,6 +8586,7 @@ stroke 4984 448 M
 % Begin plot #23
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -8914,6 +8946,7 @@ stroke 4984 448 M
 % Begin plot #24
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -9273,6 +9306,7 @@ stroke 4984 448 M
 % Begin plot #25
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -9632,6 +9666,7 @@ stroke 4984 448 M
 % Begin plot #26
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -9991,6 +10026,7 @@ stroke 4984 448 M
 % Begin plot #27
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -10350,6 +10386,7 @@ stroke 4984 448 M
 % Begin plot #28
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -10709,6 +10746,7 @@ stroke 4984 448 M
 % Begin plot #29
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -11068,6 +11106,7 @@ stroke 4984 448 M
 % Begin plot #30
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -11427,6 +11466,7 @@ stroke 4984 448 M
 % Begin plot #31
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -11786,6 +11826,7 @@ stroke 4984 448 M
 % Begin plot #32
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -12145,6 +12186,7 @@ stroke 4984 448 M
 % Begin plot #33
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -12504,6 +12546,7 @@ stroke 4984 448 M
 % Begin plot #34
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -12863,6 +12906,7 @@ stroke 4984 448 M
 % Begin plot #35
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -13222,6 +13266,7 @@ stroke 4984 448 M
 % Begin plot #36
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -13581,6 +13626,7 @@ stroke 4984 448 M
 % Begin plot #37
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -13940,6 +13986,7 @@ stroke 4984 448 M
 % Begin plot #38
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -14299,6 +14346,7 @@ stroke 4984 448 M
 % Begin plot #39
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -14658,6 +14706,7 @@ stroke 4984 448 M
 % Begin plot #40
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -15017,6 +15066,7 @@ stroke 4984 448 M
 % Begin plot #41
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -15376,6 +15426,7 @@ stroke 4984 448 M
 % Begin plot #42
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -15735,6 +15786,7 @@ stroke 4984 448 M
 % Begin plot #43
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -16094,6 +16146,7 @@ stroke 4984 448 M
 % Begin plot #44
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -16453,6 +16506,7 @@ stroke 4984 448 M
 % Begin plot #45
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -16812,6 +16866,7 @@ stroke 4984 448 M
 % Begin plot #46
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -17171,6 +17226,7 @@ stroke 4984 448 M
 % Begin plot #47
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -17530,6 +17586,7 @@ stroke 4984 448 M
 % Begin plot #48
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -17889,6 +17946,7 @@ stroke 4984 448 M
 % Begin plot #49
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -18248,6 +18306,7 @@ stroke 4984 448 M
 % Begin plot #50
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -18607,6 +18666,7 @@ stroke 4984 448 M
 % Begin plot #51
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -18966,6 +19026,7 @@ stroke 4984 448 M
 % Begin plot #52
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -19325,6 +19386,7 @@ stroke 4984 448 M
 % Begin plot #53
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -19684,6 +19746,7 @@ stroke 4984 448 M
 % Begin plot #54
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -20043,6 +20106,7 @@ stroke 4984 448 M
 % Begin plot #55
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -20402,6 +20466,7 @@ stroke 4984 448 M
 % Begin plot #56
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -20761,6 +20826,7 @@ stroke 4984 448 M
 % Begin plot #57
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -21120,6 +21186,7 @@ stroke 4984 448 M
 % Begin plot #58
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -21479,6 +21546,7 @@ stroke 4984 448 M
 % Begin plot #59
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -21838,6 +21906,7 @@ stroke 4984 448 M
 % Begin plot #60
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -22197,6 +22266,7 @@ stroke 4984 448 M
 % Begin plot #61
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -22556,6 +22626,7 @@ stroke 4984 448 M
 % Begin plot #62
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -22915,6 +22986,7 @@ stroke 4984 448 M
 % Begin plot #63
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -23274,6 +23346,7 @@ stroke 4984 448 M
 % Begin plot #64
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -23633,6 +23706,7 @@ stroke 4984 448 M
 % Begin plot #65
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -23992,6 +24066,7 @@ stroke 4984 448 M
 % Begin plot #66
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -24351,6 +24426,7 @@ stroke 4984 448 M
 % Begin plot #67
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -24710,6 +24786,7 @@ stroke 4984 448 M
 % Begin plot #68
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -25069,6 +25146,7 @@ stroke 4984 448 M
 % Begin plot #69
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -25428,6 +25506,7 @@ stroke 4984 448 M
 % Begin plot #70
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -25787,6 +25866,7 @@ stroke 4984 448 M
 % Begin plot #71
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -26146,6 +26226,7 @@ stroke 4984 448 M
 % Begin plot #72
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -26505,6 +26586,7 @@ stroke 4984 448 M
 % Begin plot #73
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -26864,6 +26946,7 @@ stroke 4984 448 M
 % Begin plot #74
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -27223,6 +27306,7 @@ stroke 4984 448 M
 % Begin plot #75
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -27582,6 +27666,7 @@ stroke 4984 448 M
 % Begin plot #76
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -27941,6 +28026,7 @@ stroke 4984 448 M
 % Begin plot #77
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -28300,6 +28386,7 @@ stroke 4984 448 M
 % Begin plot #78
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -28659,6 +28746,7 @@ stroke 4984 448 M
 % Begin plot #79
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -29018,6 +29106,7 @@ stroke 4984 448 M
 % Begin plot #80
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -29377,6 +29466,7 @@ stroke 4984 448 M
 % Begin plot #81
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -29736,6 +29826,7 @@ stroke 4984 448 M
 % Begin plot #82
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -30095,6 +30186,7 @@ stroke 4984 448 M
 % Begin plot #83
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -30454,6 +30546,7 @@ stroke 4984 448 M
 % Begin plot #84
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -30813,6 +30906,7 @@ stroke 4984 448 M
 % Begin plot #85
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -31172,6 +31266,7 @@ stroke 4984 448 M
 % Begin plot #86
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -31531,6 +31626,7 @@ stroke 4984 448 M
 % Begin plot #87
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -31890,6 +31986,7 @@ stroke 4984 1346 M
 % Begin plot #88
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 51 V
@@ -32248,6 +32345,7 @@ stroke 4997 448 M
 % Begin plot #89
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 25 V
@@ -32607,6 +32705,7 @@ stroke 4984 448 M
 % Begin plot #90
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -32966,6 +33065,7 @@ stroke 4984 448 M
 % Begin plot #91
 stroke
 LT0
+LC0 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -33325,6 +33425,7 @@ stroke 4984 448 M
 % Begin plot #92
 stroke
 LT1
+LC1 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -33684,6 +33785,7 @@ stroke 4984 448 M
 % Begin plot #93
 stroke
 LT2
+LC2 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -34043,6 +34145,7 @@ stroke 4984 448 M
 % Begin plot #94
 stroke
 LT3
+LC3 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -34402,6 +34505,7 @@ stroke 4984 448 M
 % Begin plot #95
 stroke
 LT4
+LC4 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -34761,6 +34865,7 @@ stroke 4984 448 M
 % Begin plot #96
 stroke
 LT5
+LC5 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -35120,6 +35225,7 @@ stroke 4984 448 M
 % Begin plot #97
 stroke
 LT6
+LC6 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -35479,6 +35585,7 @@ stroke 4984 448 M
 % Begin plot #98
 stroke
 LT7
+LC7 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -35838,6 +35945,7 @@ stroke 4984 448 M
 % Begin plot #99
 stroke
 LT8
+LC8 setrgbcolor
 /Helvetica findfont 140 scalefont setfont
 686 448 M
 14 0 V
@@ -36196,6 +36304,7 @@ stroke 4984 448 M
 % End plot #99
 stroke
 LTb
+LCb setrgbcolor
 686 3609 N
 686 448 L
 4821 0 V
@@ -36205,6 +36314,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end
