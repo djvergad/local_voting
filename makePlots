@@ -1,13 +1,13 @@
 #!/usr/bin/gnuplot
-#set term postscript enhanced color 
-#set term postscript eps enhanced monochrome size 4,2.8
 set term postscript eps enhanced color size 4,2.8 linewidth 2
-#set terminal epslatex color
+# set term postscript eps enhanced color size 3.5433,2.677 linewidth 1.5 font 'Helvetica,10pt'
+# set term postscript eps enhanced color size 3.5,2.62 linewidth 3
 
 #set size 1,1
 #set key spacing 1.5
 #set boxwidth 0.85
 set grid y lt 0
+set pointsize 1.5
 
 
 set key bottom right
@@ -19,7 +19,7 @@ set xlabel "Connections"
 set out "figures/avg_delay.eps"
 set title "Average End-to-End Delivery Time"
 set ylabel "Time (timeslots)"
-set yrange [500:50000]
+set yrange [300:50000]
 plot \
      "<awk '$6==\"LocalVoting\"' total" using 5:7 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"' total" using 5:7 ti 'LQF' w lp, \
