@@ -1,5 +1,5 @@
 #!/usr/bin/gnuplot
-set term postscript eps enhanced color size 4,2.8 linewidth 2
+set term postscript eps enhanced color size 4,2.8 linewidth 2 font 'Helvetica,17pt'
 # set term postscript eps enhanced color size 3.5433,2.677 linewidth 1.5 font 'Helvetica,10pt'
 # set term postscript eps enhanced color size 3.5,2.62 linewidth 3
 
@@ -8,7 +8,7 @@ set term postscript eps enhanced color size 4,2.8 linewidth 2
 #set boxwidth 0.85
 set grid y lt 0
 set pointsize 1.5
-
+set key spacing 1.5 maxrows 3 opaque width -5
 
 set key bottom right
 #set format x "%.1f"
@@ -18,7 +18,7 @@ set xlabel "Connections"
 
 set out "figures/avg_delay.eps"
 set title "Average End-to-End Delivery Time"
-set ylabel "Time (timeslots)"
+set ylabel "Time (time slots)"
 set yrange [300:50000]
 plot \
      "<awk '$6==\"LocalVoting\"' total" using 5:7 ti 'LocalVoting' w lp, \
@@ -28,7 +28,7 @@ plot \
      "<awk '$6==\"Lyui\"' total" using 5:7 ti 'Lyui' lt 8 w lp, \
      "<awk '$6==\"LQFLinkScheduller\"' total" using 5:7 ti 'LQF link' lt 9 w lp
 
-set key bottom left
+set key at 20,0.71
 
 
 set out "figures/fairness.eps"
@@ -44,11 +44,13 @@ plot \
      "<awk '$6==\"Lyui\"' total" using 5:8 ti 'Lyui' lt 8 w lp, \
      "<awk '$6==\"LQFLinkScheduller\"' total" using 5:8 ti 'LQF link' lt 9 w lp
 
+set key default
 set key bottom right
+set key spacing 1.5 maxrows 3 opaque width -5
 set out "figures/max_delay.eps"
 set logscale y
 set title "Maximum End-to-End Delivery Time"
-set ylabel "Time (timeslots)"
+set ylabel "Time (time slots)"
 set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\"' total" using 5:9 ti 'LocalVoting' w lp , \
@@ -62,7 +64,7 @@ set key bottom right
 
 set out "figures/min_delay.eps"
 set title "Minimum End-to-End Delivery Time"
-set ylabel "Time (timeslots)"
+set ylabel "Time (time slots)"
 set yrange [*:*]
 plot \
      "<awk '$6==\"LocalVoting\"' total" using 5:10 ti 'LocalVoting' w lp, \
@@ -90,7 +92,7 @@ plot \
 set out "figures/expo_del.eps"
 set title "Delay"
 set yrange [5:200000]
-set ylabel "Delay (timeslots)"
+set ylabel "Delay (time slots)"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:9 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:9 ti 'LQF' w lp, \
@@ -102,7 +104,7 @@ plot \
 set out "figures/expo_deliv.eps"
 set title "Delivery time"
 set yrange [1000:200000]
-set ylabel "Time (timeslots)"
+set ylabel "Time (time slots)"
 plot \
      "<awk '$6==\"LocalVoting\"&&$7==0' total_expo" using 5:10 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:10 ti 'LQF' w lp, \
@@ -169,7 +171,7 @@ plot \
 set out "figures/gamma_del.eps"
 set title "Delay"
 set yrange [5:200000]
-set ylabel "Delay (timeslots)"
+set ylabel "Delay (time slots)"
 plot \
      "<awk '$6==0.001&&$7==0' total_gamma" using 5:9 ti 'gamma=0.001' w lp, \
      "<awk '$6==0.01&&$7==0' total_gamma" using 5:9 ti 'gamma=0.01' w lp, \
@@ -182,7 +184,7 @@ plot \
 set out "figures/gamma_deliv.eps"
 set title "Delivery time"
 set yrange [1000:200000]
-set ylabel "Time (timeslots)"
+set ylabel "Time (time slots)"
 plot \
      "<awk '$6==0.001&&$7==0' total_gamma" using 5:10 ti 'gamma=0.001' w lp, \
      "<awk '$6==0.01&&$7==0' total_gamma" using 5:10 ti 'gamma=0.01' w lp, \
