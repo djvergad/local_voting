@@ -1,12 +1,14 @@
 #!/usr/bin/gnuplot
 #set term postscript enhanced color
-set term postscript eps enhanced color size 4,2.8 linewidth 2
+set term postscript eps enhanced color size 4,2.8 linewidth 2 font 'Helvetica,17pt'
 #set terminal epslatex color
 
 #set size 1,1
 #set key spacing 1.5
 #set boxwidth 0.85
 set grid y lt 0
+set pointsize 1.5                                                               
+set key spacing 1.5 maxrows 3 opaque width -5 
 
 #arrival="0.0056234133"
 
