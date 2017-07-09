@@ -34,6 +34,8 @@ plot \
 set out "figures/deliv_".arrival.".eps"
 set title "Delivery Time, for Arrival rate = ".arrival
 set ylabel "Delay (timeslots)"
+set key top left
+set key spacing 1.5 maxrows 3 opaque width -2
 #set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:10 ti 'LocalVoting' w lp, \
@@ -45,6 +47,8 @@ plot \
 set out "figures/thr_".arrival.".eps"
 set title "Throughput, for Arrival rate = ".arrival 
 set ylabel "Throughpu (Packets/timeslot)"
+set key bottom right
+set key spacing 1.5 maxrows 3 opaque width -5 
 #set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".arrival."\"' total_expo" using 7:8 ti 'LocalVoting' w lp, \
