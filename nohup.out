@@ -355,3 +355,90 @@ parallel: ./runOnce.sh 100 10 500 10 30./runParallelDensityOnlyLV.sh: line 7:  6
 >>>>>>> 8163a4b4dc06f7a51b053a6ce101ec8a90413b5b
 ssh: connect to host compute-0-7 port 22: No route to host
 ssh: connect to host compute-0-8 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-8 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-8 port 22: No route to host
+./runExpo.sh: line 4: 15710 Terminated              java -cp $PWD/dist/Local_Voting.jar stability.ExpoRun "$@"
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 119 jobs to finish. Send SIGTERM again to stop now.
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 196
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 126
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 236
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 182
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 172
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 145
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 136
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 228
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 175
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 163
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 138
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 214
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 221
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 135
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 207
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 222
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 129
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 124
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 152
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 199
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 154
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 127
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 158
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 110
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 156
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 151
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 216
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 144
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 133
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 125
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 185
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 119
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 168
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 147
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 123
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 235
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 188
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 194
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 178
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 166
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 230
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 229
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 234
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 200
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 180
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 184
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 206
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 177
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 198
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 142
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 215
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 202
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 155
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 187
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 153
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 171
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 150
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 226
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 210
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 174
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 201
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 181
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 218
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 223
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 209
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 161
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 130
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 176
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 197
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 186
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 146
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 173
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 220
+parallel: ./runExpo.sh 100 10 100 10 0.1 LQF 0.0 169
+parallel: ./runExpo.sh 100 10 100 10 ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-8 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-8 port 22: No route to host
+ssh: connect to host compute-0-7 port 22: No route to host
+ssh: connect to host compute-0-8 port 22: No route to host
