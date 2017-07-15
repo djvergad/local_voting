@@ -1,3 +1,3 @@
 #!/bin/bash 
 echo -n "$@ "
-~/local/bin/java -cp $PWD/dist/Stability.jar stability.ExpoRun "$@"
+java -cp $PWD/dist/Local_Voting.jar stability.ExpoRun "$@"
