@@ -7,6 +7,13 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+
+# Output files
+nohup.out
+
+# Log files
+*.log
+
 # Class Files #
 *.class
 
