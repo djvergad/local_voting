@@ -24,6 +24,7 @@ thr_001
 expo_deliv04
 expo_del04
 expo_th04
+expo_thf04
 gamma_deliv
 gamma_del
 gamma_th
