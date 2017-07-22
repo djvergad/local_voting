@@ -17,24 +17,28 @@ set boxwidth 0.05 absolute
 set style fill solid 1.0 noborder
 set xlabel "Queue length"
 set ylabel "Points"
-set yrange [0:10000]
-set xrange [0:150]
-#set logscale y
+# set yrange [0:10000]
+set xrange [1:*]
+# set logscale y
 
-bin_width = 5;
+bin_width = 1;
 bin_number(x) = floor(x/bin_width)
 
 rounded(x) = bin_width * (bin_number(x) + 0.5)
 
-plot 'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
+# plot 'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
 
-set out "figures/avg.eps"
-set title "steady state - histgram - average over time"
-bin_width = 0.01;
-set ylabel "Nodes"
-set yrange [*:*]
-set xrange [0:0.7]
-plot 'single_dump_simple_avg' using (rounded($1)):(1) smooth frequency t "simple", \
-     'single_dump_balanced_avg' using (rounded($1)):(1) smooth frequency t "balanced", \
-     'single_dump_localVoting_avg' using (rounded($1)):(1) smooth frequency t "Local Voting"
+plot "< tail -10000000 output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true"  using (rounded($4)):(4) smooth frequency t "Local Voting", \
+     "< tail -10000000 output_hist_100_10_100_10_0.001_LQF_0.0_1_true"  using (rounded($4)):(4) smooth frequency t "LQF"
+
+
+# set out "figures/avg.eps"
+# set title "steady state - histgram - average over time"
+# bin_width = 0.01;
+# set ylabel "Nodes"
+# set yrange [*:*]
+# set xrange [0:0.7]
+# plot 'single_dump_simple_avg' using (rounded($1)):(1) smooth frequency t "simple", \
+#      'single_dump_balanced_avg' using (rounded($1)):(1) smooth frequency t "balanced", \
+#      'single_dump_localVoting_avg' using (rounded($1)):(1) smooth frequency t "Local Voting"
 

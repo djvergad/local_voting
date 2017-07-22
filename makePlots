@@ -216,3 +216,19 @@ plot \
      "<awk '$6==10.0&&$7==0' total_gamma" using 5:11 ti 'gamma=10' lt 7 w lp, \
      "<awk '$6==100.0&&$7==0' total_gamma" using 5:11 ti 'gamma=100' lt 8 w lp, \
      "<awk '$6==1000.0&&$7==0' total_gamma" using 5:11 ti 'gamma=1000' lt 9 w lp
+
+set out "figures/histogram.eps"
+set title "steady state - histgram - individual"
+set logscale y
+set logscale x
+set xrange [*:*]
+set xlabel "Queue length"
+set ylabel "Points"
+
+binwidth=5
+bin(x,width)=width*floor(x/width) + 0.5*width
+
+plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true" using (bin($1,binwidth)):($2) ti 'Local Voting' smooth freq,\
+     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_LQF_0.0_1_true" using (bin($1,binwidth)):($2) ti 'LQF' smooth freq, \
+     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_DRAND_0.0_1_true" using (bin($1,binwidth)):($2) ti 'DRAND' smooth freq
+
