@@ -18,29 +18,26 @@ set style fill solid 1.0 noborder
 set xlabel "Queue length"
 set ylabel "Points"
 #set yrange [0:10000]
-set xrange [1:*]
- set yrange [0.001:1e300]
+# set xrange [0.1:*]
+# set yrange [0.001:*]
 set logscale x
 set logscale y
 
-# bin_width = 1;
-# bin_number(x) = 10**floor(log10(x+0.1)/bin_width)
-
-
-bin_width = 2
-
-rounded(x) = bin_width**(floor(log(x+0.1)/log(bin_width)))       # bin_width * (bin_number(x) + 0.5)
-
-do for [k=1:100] {
-   print k, log(k), ceil(log(k)), rounded(k) 
-}
-
+# set style histogram clustered
+# set boxwidth 0.01
 
 # plot 'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
 
-plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true"  using (rounded($1)):($2/rounded($1)) smooth frequency t "Local Voting" w lp, \
-     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_LQF_0.0_1_true" using (rounded($1)):($2) ti 'LQF' smooth freq w lp, \
-     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_DRAND_0.0_1_true" using (rounded($1)):($2) ti 'DRAND' smooth freq w lp
+del="0.001"
+plot "<awk -vd=".del." '$2==d&&$3==\"LocalVoting\"' total_hist" using 4:5 w l t "LocalVoting", \
+     "<awk -vd=".del." '$2==d&&$3==\"LQF\"' total_hist" using 4:5 w l t "LQF", \
+     "<awk -vd=".del." '$2==d&&$3==\"DRAND\"' total_hist" using 4:5 w l t "Lobats", \
+     "<awk -vd=".del." '$2==d&&$3==\"Lobats\"' total_hist" using 4:5 w l t "Lobats", \
+     "<awk -vd=".del." '$2==d&&$3==\"Lyui\"' total_hist" using 4:5 w l t "Lyui"
+
+#plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.0001_LocalVoting_0.0_1_true"  using (rounded($1)):(val($2,$1)) smooth frequency t "Local Voting" w l, \
+#    "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.0001_LQF_0.0_1_true" using (rounded($1)):(val($2,$1)) ti 'LQF' smooth freq w l, \
+#    "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.0001_DRAND_0.0_1_true" using (rounded($1)):(val($2,$1)) ti 'DRAND' smooth freq w l
      
 
 
