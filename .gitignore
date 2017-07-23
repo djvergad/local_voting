@@ -7,6 +7,8 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+results_hist/
+results_hist.tar.gz
 
 # Output files
 nohup.out
