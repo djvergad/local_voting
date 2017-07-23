@@ -2,6 +2,7 @@
 BEGIN { bin_width = 1.3}
 
 BEGINFILE {
+  part=""
   split(FILENAME, a, "_")
   arrival = a[7]
   protocol =a[8]
@@ -10,13 +11,11 @@ BEGINFILE {
 /Dumping Slots:/ {part="s"}
 /Dumping Load:/ {part="l"}
 
-part == "q" {
+part {
   bin = rounded($1)
   sum[part FS arrival FS protocol FS bin] += $2/bin
   count_bin[part FS arrival FS protocol] += $2
-
 }
-
 END {
   for(k in sum) {
     split(k, a, FS)
