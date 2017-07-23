@@ -17,19 +17,32 @@ set boxwidth 0.05 absolute
 set style fill solid 1.0 noborder
 set xlabel "Queue length"
 set ylabel "Points"
-# set yrange [0:10000]
+#set yrange [0:10000]
 set xrange [1:*]
-# set logscale y
+ set yrange [0.001:1e300]
+set logscale x
+set logscale y
 
-bin_width = 1;
-bin_number(x) = floor(x/bin_width)
+# bin_width = 1;
+# bin_number(x) = 10**floor(log10(x+0.1)/bin_width)
 
-rounded(x) = bin_width * (bin_number(x) + 0.5)
+
+bin_width = 2
+
+rounded(x) = bin_width**(floor(log(x+0.1)/log(bin_width)))       # bin_width * (bin_number(x) + 0.5)
+
+do for [k=1:100] {
+   print k, log(k), ceil(log(k)), rounded(k) 
+}
+
 
 # plot 'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
 
-plot "< tail -10000000 output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true"  using (rounded($4)):(4) smooth frequency t "Local Voting", \
-     "< tail -10000000 output_hist_100_10_100_10_0.001_LQF_0.0_1_true"  using (rounded($4)):(4) smooth frequency t "LQF"
+plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true"  using (rounded($1)):($2/rounded($1)) smooth frequency t "Local Voting" w lp, \
+     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_LQF_0.0_1_true" using (rounded($1)):($2) ti 'LQF' smooth freq w lp, \
+     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_DRAND_0.0_1_true" using (rounded($1)):($2) ti 'DRAND' smooth freq w lp
+     
+
 
 
 # set out "figures/avg.eps"
