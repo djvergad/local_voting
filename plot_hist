@@ -19,8 +19,8 @@ set ylabel "Points"
 #set yrange [0:10000]
 # set xrange [0.1:*]
 # set yrange [0.001:*]
-set logscale x
-set logscale y
+# set logscale x
+# set logscale y
 
 # set style histogram clustered
 # set boxwidth 0.01
@@ -43,6 +43,7 @@ do for [i=1:words(arrival_str)] {
     set title word(type_legends, t)."Histogram, lamda=".arrival
     set out "figures/simple_hist_".arrival."_".word(type_legends, t).".eps"
   
+   print "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist"
    plot "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist" using 4:5 w l t "LocalVoting"# , \
 #         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LQF\"' total_hist" using 4:5 w l t "LQF", \
 #         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"DRAND\"' total_hist" using 4:5 w l t "Lobats", \

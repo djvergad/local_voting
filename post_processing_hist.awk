@@ -4,8 +4,9 @@ BEGIN { bin_width = 1.3}
 BEGINFILE {
   part=""
   split(FILENAME, a, "_")
-  arrival = a[7]
-  protocol =a[8]
+  arrival = a[8]
+  protocol =a[9]
+  print "processing file " FILENAME arrival protocol > "/dev/stderr"
 }
 /Dumping Queue:/ {part="q"}
 /Dumping Slots:/ {part="s"}
