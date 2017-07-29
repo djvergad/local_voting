@@ -11,10 +11,9 @@ set pointsize 1.5
 set key spacing 1.5 maxrows 3 opaque width -5
 
 
-set out "figures/simple_hist.eps"
-set title "steady state - histgram - individual"
 set boxwidth 0.05 absolute
 set style fill solid 1.0 noborder
+set format y "%.0tx10^{%T}"
 set xlabel "Queue length"
 set ylabel "Points"
 #set yrange [0:10000]
@@ -28,13 +27,30 @@ set logscale y
 
 # plot 'hist_localvoting_scen2' using (rounded($1)):(1) smooth frequency t "Local Voting"
 
-del="0.001"
-plot "<awk -vd=".del." '$2==d&&$3==\"LocalVoting\"' total_hist" using 4:5 w l t "LocalVoting", \
-     "<awk -vd=".del." '$2==d&&$3==\"LQF\"' total_hist" using 4:5 w l t "LQF", \
-     "<awk -vd=".del." '$2==d&&$3==\"DRAND\"' total_hist" using 4:5 w l t "Lobats", \
-     "<awk -vd=".del." '$2==d&&$3==\"Lobats\"' total_hist" using 4:5 w l t "Lobats", \
-     "<awk -vd=".del." '$2==d&&$3==\"Lyui\"' total_hist" using 4:5 w l t "Lyui"
+# arrival_str="0.1 0.0562341325  0.0316227766  0.0177827941  0.01  0.0056234133  0.0031622777  0.0017782794  0.001 0.0005623413  0.0003162278  0.0001778279  0.0001"
 
+arrival_str="0.0001 0.001 0.01"
+types="qsl"
+type_legends="Queue Slots Load"
+
+do for [i=1:words(arrival_str)] {
+  do for [t=1:strlen(types)] {
+    arrival = word(arrival_str,i)
+    type = types[t:t]
+  
+    print "Arrival is ".arrival.", type= ".type. " t= ".t
+
+    set title word(type_legends, t)."Histogram, lamda=".arrival
+    set out "figures/simple_hist_".arrival."_".word(type_legends, t).".eps"
+  
+   plot "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist" using 4:5 w l t "LocalVoting"# , \
+#         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LQF\"' total_hist" using 4:5 w l t "LQF", \
+#         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"DRAND\"' total_hist" using 4:5 w l t "Lobats", \
+#         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lobats\"' total_hist" using 4:5 w l t "Lobats", \
+#         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lyui\"' total_hist" using 4:5 w l t "Lyui"
+  }
+
+}
 #plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.0001_LocalVoting_0.0_1_true"  using (rounded($1)):(val($2,$1)) smooth frequency t "Local Voting" w l, \
 #    "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.0001_LQF_0.0_1_true" using (rounded($1)):(val($2,$1)) ti 'LQF' smooth freq w l, \
 #    "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.0001_DRAND_0.0_1_true" using (rounded($1)):(val($2,$1)) ti 'DRAND' smooth freq w l
