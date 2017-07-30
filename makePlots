@@ -90,8 +90,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:8 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:8 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:8 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:8 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:8 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:8 ti 'Lyui' lt 8 w lp
  
 set out "figures/expo_del.eps"
 set title "Delay"
@@ -102,8 +101,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:9 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:9 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:9 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:9 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:9 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:9 ti 'Lyui' lt 8 w lp
 
 set out "figures/expo_deliv.eps"
 set title "Delivery time"
@@ -114,8 +112,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:10 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:10 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:10 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:10 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:10 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:10 ti 'Lyui' lt 8 w lp
 
 set out "figures/expo_thf.eps"
 unset logscale y
@@ -128,8 +125,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:11 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:11 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:11 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:11 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:11 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:11 ti 'Lyui' lt 8 w lp
 
 set out "figures/expo_delf.eps"
 set title "Fairness in terms of delay"
@@ -139,8 +135,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:12 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:12 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:12 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:12 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:12 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:12 ti 'Lyui' lt 8 w lp
 
 set out "figures/expo_delivf.eps"
 set title "Fairness in terms of delivery time"
@@ -150,8 +145,7 @@ plot \
      "<awk '$6==\"LQF\"&&$7==0' total_expo" using 5:13 ti 'LQF' w lp, \
      "<awk '$6==\"DRAND\"&&$7==0' total_expo" using 5:13 ti 'DRAND' w lp, \
      "<awk '$6==\"Lobats\"&&$7==0' total_expo" using 5:13 ti 'LoBaTS' lt 7 w lp, \
-     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:13 ti 'Lyui' lt 8 w lp, \
-     "<awk '$6==\"LQFLinkScheduller\"&&$7==0' total_expo" using 5:13 ti 'LQF link' lt 9 w lp
+     "<awk '$6==\"Lyui\"&&$7==0' total_expo" using 5:13 ti 'Lyui' lt 8 w lp
 
 
 set out "figures/gamma_th.eps"
@@ -216,19 +210,4 @@ plot \
      "<awk '$6==10.0&&$7==0' total_gamma" using 5:11 ti 'gamma=10' lt 7 w lp, \
      "<awk '$6==100.0&&$7==0' total_gamma" using 5:11 ti 'gamma=100' lt 8 w lp, \
      "<awk '$6==1000.0&&$7==0' total_gamma" using 5:11 ti 'gamma=1000' lt 9 w lp
-
-set out "figures/histogram.eps"
-set title "steady state - histgram - individual"
-set logscale y
-set logscale x
-set xrange [*:*]
-set xlabel "Queue length"
-set ylabel "Points"
-
-binwidth=5
-bin(x,width)=width*floor(x/width) + 0.5*width
-
-plot "<awk '/Dumping Slots:/{p=0}p{print $1,$2};/Dumping Queue:/{p=1}' output_hist_100_10_100_10_0.001_LocalVoting_0.0_1_true" using (bin($1,binwidth)):($2) ti 'Local Voting' smooth freq,\
-     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_LQF_0.0_1_true" using (bin($1,binwidth)):($2) ti 'LQF' smooth freq, \
-     "<awk '/Dumping Queue:/,/Dumping Slots:/' output_hist_100_10_100_10_0.001_DRAND_0.0_1_true" using (bin($1,binwidth)):($2) ti 'DRAND' smooth freq
 
