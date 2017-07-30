@@ -7,9 +7,14 @@ BEGIN { bin_width = 1.3}
   protocol = $3
   bin = rounded($4)
   bin_points = calc_bin_points($4)
+  key = part FS arrival FS protocol FS bin
 #  print $4, $5, bin, bin_points
-  sum[part FS arrival FS protocol FS bin] += $5 / bin_points
 
+  sum[key] += $5 / bin_points
+  if (key != prevkey) {
+    print key > "/dev/stderr";
+    prevkey = key
+  }
 }
 END {
   for(k in sum) {

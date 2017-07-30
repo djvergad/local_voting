@@ -8,13 +8,12 @@ BEGINFILE {
   protocol =a[9]
   print "processing file " FILENAME arrival protocol > "/dev/stderr"
 }
-/Dumping Queue:/ {part="q"}
-/Dumping Slots:/ {part="s"}
-/Dumping Load:/ {part="l"}
+/Dumping Endtoend:/ {part = "e"; next}
+/Dumping nodal:/ {part = "n"; next}
 
 part {
-  bin = rounded($1)
-  sum[part FS arrival FS protocol FS bin] += $2/bin
+  bin = $1; #  rounded($1)
+  sum[part FS arrival FS protocol FS bin] += $2 # /bin
   count_bin[part FS arrival FS protocol] += $2
 }
 END {

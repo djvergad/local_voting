@@ -8,7 +8,9 @@ nbactions.xml
 nb-configuration.xml
 
 results_hist/
+results_hist_old/
 results_hist.tar.gz
+total_hist
 gawk
 
 # Output files
