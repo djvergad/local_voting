@@ -14,11 +14,10 @@ set key spacing 1.5 maxrows 3 opaque width -5
 set boxwidth 0.05 absolute
 set style fill solid 1.0 noborder
 set format y "%.0tx10^{%T}"
-set xlabel "Queue length"
 set ylabel "Points"
 #set yrange [0:10000]
- set xrange [0.5:*]
- set yrange [0.0000001:*]
+# set xrange [0.5:*]
+set yrange [0.0000001:*]
  set logscale x
  set logscale y
 
@@ -29,9 +28,9 @@ set ylabel "Points"
 
 # arrival_str="0.1 0.0562341325  0.0316227766  0.0177827941  0.01  0.0056234133  0.0031622777  0.0017782794  0.001 0.0005623413  0.0003162278  0.0001778279  0.0001"
 
-arrival_str="0.01"
-types="qsl"
-type_legends="Queue Slots Load"
+arrival_str="0.0001 0.0001778279 0.0003162278 0.0005623413 0.001 0.0017782794 0.0031622777 0.0056234133 0.01 0.0177827941 0.0316227766 0.0562341325 0.1"
+types="en"
+type_legends="End-to-end Nodal"
 
 do for [i=1:words(arrival_str)] {
   do for [t=1:strlen(types)] {
@@ -40,15 +39,18 @@ do for [i=1:words(arrival_str)] {
   
     print "Arrival is ".arrival.", type= ".type. " t= ".t
 
-    set title word(type_legends, t)."Histogram, lamda=".arrival
+    set title word(type_legends, t)." histogram, lamda=".arrival
     set out "figures/simple_hist_".arrival."_".word(type_legends, t).".eps"
+    set xlabel word(type_legends, t)." delay"
   
-   print "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist"
-   plot "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist" using 4:5 w l t "LocalVoting", \
-         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LQF\"' total_hist" using 4:5 w l t "LQF", \
-         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"DRAND\"' total_hist" using 4:5 w l t "Lobats", \
-         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lobats\"' total_hist" using 4:5 w l t "Lobats", \
-         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lyui\"' total_hist" using 4:5 w l t "Lyui"
+   print "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist_bins"
+   plot "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LocalVoting\"' total_hist_bins" using 4:5 w l t "LocalVoting", \
+         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"LQF\"' total_hist_bins" using 4:5 w l t "LQF", \
+         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"DRAND\"' total_hist_bins" using 4:5 w l t "Lobats", \
+         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lobats\"' total_hist_bins" using 4:5 w l t "Lobats", \
+         "<awk -vd=".arrival." -vtype=".type." '$1==type&&$2==d&&$3==\"Lyui\"' total_hist_bins" using 4:5 w l t "Lyui"
+
+
   }
 
 }
