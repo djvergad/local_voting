@@ -3,4 +3,6 @@
 ant
 ./runParallel.sh
 ./runParallelExpo.sh
+./runParallelGamma.sh
 ./runParallelDensity.sh
+./runParallelHist.sh
