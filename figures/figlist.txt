@@ -13,8 +13,8 @@ expo_deliv
 expo_del
 expo_th
 expo_thf
-localVoting
-simple_hist
+simple_hist_001_Nodal
+simple_hist_001_End-to-end
 deliv_0001
 del_0001
 thr_0001
@@ -28,3 +28,4 @@ expo_thf04
 gamma_deliv
 gamma_del
 gamma_th
+link

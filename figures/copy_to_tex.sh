@@ -6,7 +6,7 @@ do
 
     case $target_basename in 
       *_0001) source_basename=${target_basename/_0001/_0.0001} ;;
-      *_001) source_basename=${target_basename/_001/_0.001} ;;
+      *_001*) source_basename=${target_basename/_001/_0.001} ;;
       *04) source_basename=${target_basename/04/0.4} ;;
       *) source_basename=$target_basename
 

@@ -8,22 +8,24 @@ set term postscript eps enhanced color size 4,2.8 linewidth 2 font 'Helvetica,17
 #set boxwidth 0.85
 set grid y lt 0
 set pointsize 1.5                                                               
-set key spacing 1.5 maxrows 3 opaque width -5 
+set key spacing 1.5 maxrows 2 width -5 
 
 #arrival="0.0056234133"
 
 print "connections=".connections
 
-set key bottom right
+set key top right
 #set format x "%.1f"
 set logscale y
+set logscale x
 
 set xlabel "Topology size"
 
 set out "figures/dens_avg_".connections.".eps"
 set title "Average Delay, for ".connections." connections"
 set ylabel "Delay (timeslots)"
-#set yrange [500:50000]
+set xrange [7:250]
+set yrange [500:50000]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:7 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:7 ti 'LQF' w lp, \
@@ -34,7 +36,7 @@ plot \
 set out "figures/dens_fair_".connections.".eps"
 set title "Fairness, for ".connections." connections"
 set ylabel "Jain's fairness index"
-#set yrange [500:50000]
+set yrange [*:*]
 plot \
      "<awk '$6==\"LocalVoting\" && $5==\"".connections."\"' total_density" using 3:8 ti 'LocalVoting' w lp, \
      "<awk '$6==\"LQF\" && $5==\"".connections."\"' total_density" using 3:8 ti 'LQF' w lp, \
